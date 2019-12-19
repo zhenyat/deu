@@ -1,0 +1,17 @@
+de:
+  activerecord:
+    models:
+      entry:
+        one:                    der Eintrag
+        other:                  die Einträge
+
+    attributes:
+      entry:
+        speach_part:            derWortart
+        article:                der Artikel
+        de:                     auf deutsch
+        en:                     auf Englisch
+        ru:                     auf Russisch
+        transcription:          вшу Transkription
+        plural:                 der Plural
+

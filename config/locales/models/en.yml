@@ -1,0 +1,15 @@
+en:
+  activerecord:
+    models:
+      entry:
+        one:                    Entry
+        other:                  Entries
+
+    attributes:
+      entry:
+        speach_part:            Part of Speach
+        article:                Артикль
+        de:                     in German
+        en:                     in English
+        ru:                     in Russian
+

@@ -1,0 +1,17 @@
+ru:
+  activerecord:
+    models:
+      entry:
+        one:                    Запись
+        other:                  Записи
+
+    attributes:
+      entry:
+        speach_part:            Часть речи
+        article:                Артикль
+        de:                     по-немецки
+        en:                     на английском
+        ru:                     на русском
+        transcription:          Транскрипция
+        plural:                 Множ. число
+
