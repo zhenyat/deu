@@ -1,0 +1,121 @@
+<nav class='flex sticky top-0 h-16 p-4 text-center justify-between bg-slate-200'>
+  <div class='flex items-center'>
+
+    <div class='p-2'>
+      <%= link_to root_path do %>
+        <i class="fa-solid fa-house fa-2x" style="color:navy"></i>
+        <%= t(:home) %>
+      <% end %>
+    </div>
+
+    <div class='p-2'>
+      <div data-controller="dropdown" class="relative">
+        <button type="button" data-action="dropdown#toggle click@window->dropdown#hide" class='flex items-center'>
+          Dropdown
+          <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+          </svg>
+        </button>
+
+        <div
+          data-dropdown-target="menu"
+          class="hidden transition transform origin-top-right absolute right-0 w-32 bg-white"
+          data-transition-enter-from="opacity-0 scale-95"
+          data-transition-enter-to="opacity-100 scale-100"
+          data-transition-leave-from="opacity-100 scale-100"
+          data-transition-leave-to="opacity-0 scale-95"
+        >
+          <%= link_to 'First', '#', :'data-action' => 'dropdown#toggle', class: 'flex' %>
+          <%= link_to 'Second', '#', :'data-action' => 'dropdown#toggle', class: 'flex' %>
+          <%= link_to 'Third Third','#', :'data-action' => 'dropdown#toggle', class: 'flex' %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='flex'>
+    <div class='p-2'>
+      <!--  https://tailwindcomponents.com/component/dropdown-8  -->
+      <div class="relative w-full items-center mx-auto max-w-screen-sm">
+        <div id="bouton" class="relative group/bouton w-full">
+          <button class="bg-stone-100 py- pr-10 min-w-40 relative w-full">
+            Drop-down
+            <span class="absolute flex items-center justify-center bg-stone-200 w-8 top-0 h-full right-0">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 group-hover/bouton:rotate-90">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
+            </span>
+          </button>
+          <div class="relative w-full bg-white top-full origine-top opacity-0 hidden flex-col group-hover/bouton:flex group-hover/bouton:opacity-100 transition-all">
+            <div class="relative flex justify-between items-center w-full py-6 border-b border-stone-200 px-10">
+              <div class="flex h-full items-center gap-3">
+                <div class="block">
+                  <img src="https://i.pravatar.cc/300" class="h-12 w-12 object-cover rounded-full" alt="">
+                </div>
+                <div class="mb-0 block flex-col">
+                  <b>Leonard da vincy 1</b>
+                  <span class="block text-sm text-stone-500">@leonard</span>
+                </div>
+              </div>
+              <a href="" class="border rounded-md py-2 px-4 border-stone-300 uppercase font-medium text-xs text-stone-400 hover:shadow-md">Voir</a>
+            </div>
+            <div class="relative flex justify-between items-center w-full py-6 border-b border-stone-200 px-10">
+              <div class="flex h-full items-center gap-3">
+                <div class="block">
+                  <img src="https://i.pravatar.cc/300" class="h-12 w-12 object-cover rounded-full" alt="">
+                </div>
+                <div class="mb-0 block flex-col">
+                  <b>Leonard da vincy 2</b>
+                  <span class="block text-sm text-stone-500">@leonard</span>
+                </div>
+              </div>
+              <a href="" class="border rounded-md py-2 px-4 border-stone-300 uppercase font-medium text-xs text-stone-400 hover:shadow-md">Voir</a>
+            </div>
+            <div class="relative flex justify-between items-center w-full py-6 border-b border-stone-200 px-10">
+              <div class="flex h-full items-center gap-3">
+                <div class="block">
+                  <img src="https://i.pravatar.cc/300" class="h-12 w-12 object-cover rounded-full" alt="">
+                </div>
+                <div class="mb-0 block flex-col">
+                  <b>Leonard da vincy 3</b>
+                  <span class="block text-sm text-stone-500">@leonard</span>
+                </div>
+              </div>
+              <a href="" class="border rounded-md py-2 px-4 border-stone-300 uppercase font-medium text-xs text-stone-400 hover:shadow-md">Voir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='p-2'>
+      <div data-controller="dropdown" class="relative">
+        <button type="button" data-action="dropdown#toggle click@window->dropdown#hide" class='flex items-center'>
+          <%= t(locale, scope: 'locales') %>
+          <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+          </svg>
+        </button>
+
+        <div
+          data-dropdown-target="menu"
+          class="hidden transition transform origin-top-right absolute right-0"
+          data-transition-enter-from="opacity-0 scale-95"
+          data-transition-enter-to="opacity-100 scale-100"
+          data-transition-leave-from="opacity-100 scale-100"
+          data-transition-leave-to="opacity-0 scale-95"
+        >
+          <ul class='bg-white px-4'>
+            <% I18n. available_locales.each do |locale| %>
+              <li>
+                <% if I18n.locale != locale %>
+                  <%= link_to t(locale, scope: 'locales'), url_for(locale: locale), :class => 'hover:bg-sky-200' %>
+                <% end %>
+              </li>
+            <% end %> 
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
