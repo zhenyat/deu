@@ -1,0 +1,28 @@
+<div class='container'>
+  <h1 class="font-bold text-4xl pb-6"><%= Number.model_name.human count: 2 %></h1>
+
+  <table class="min-w-full table-auto">
+    <thead class="text-xl text-gray-700 bg-gray-200">
+      <tr>
+        <th scope="col" class="px-4 py-0"><%= Number.human_attribute_name("de") %></th>
+        <th scope="col" class="px-6 py-0"><%= Number.human_attribute_name("en") %></th>
+        <th scope="col" class="px-6 py-0"><%= Number.human_attribute_name("ru") %></th>
+        <th scope="col" class="px-6 py-0"><%= Number.human_attribute_name("abbr_de") %></th>
+        <th scope="col" class="px-6 py-0"><%= Number.human_attribute_name("abbr_en") %></th>
+        <th scope="col" class="px-6 py-0"><%= Number.human_attribute_name("abbr_ru") %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @numbers.each do |number| %>
+        <tr class="text-xl bg-blue-100 text-center even:bg-blue-50 odd:bg-green-50">
+          <td class="px-6 py-4"><%= number.de %></td>
+          <td class="px-6 py-4"><%= number.en %></td>
+          <td class="px-6 py-4"><%= number.ru %></td>
+          <td class="px-6 py-4"><%= number.abbr_de %></td>
+          <td class="px-6 py-4"><%= number.abbr_en %></td>
+          <td class="px-6 py-4"><%= number.abbr_ru %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
