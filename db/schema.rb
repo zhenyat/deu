@@ -10,7 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_16_180430) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_16_191239) do
+  create_table "cases", force: :cascade do |t|
+    t.string "de", null: false
+    t.string "en", null: false
+    t.string "ru", null: false
+    t.string "abbr_de", null: false
+    t.string "abbr_en", null: false
+    t.string "abbr_ru", null: false
+    t.string "questions_de", null: false
+    t.string "questions_en", null: false
+    t.string "questions_ru", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "description"
+    t.index ["abbr_de"], name: "index_cases_on_abbr_de", unique: true
+    t.index ["abbr_en"], name: "index_cases_on_abbr_en", unique: true
+    t.index ["abbr_ru"], name: "index_cases_on_abbr_ru", unique: true
+    t.index ["de"], name: "index_cases_on_de", unique: true
+    t.index ["en"], name: "index_cases_on_en", unique: true
+    t.index ["questions_de"], name: "index_cases_on_questions_de", unique: true
+    t.index ["questions_en"], name: "index_cases_on_questions_en", unique: true
+    t.index ["questions_ru"], name: "index_cases_on_questions_ru", unique: true
+    t.index ["ru"], name: "index_cases_on_ru", unique: true
+  end
+
   create_table "genders", force: :cascade do |t|
     t.string "de", null: false
     t.string "en", null: false
