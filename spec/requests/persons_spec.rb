@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Numbers", type: :request do
+RSpec.describe "Persons", type: :request do
   for locale in Rails.application.config.i18n.available_locales do
     it "returns http success for #{locale}" do
       get "/#{locale}/genders"
