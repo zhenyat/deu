@@ -1,5 +1,6 @@
 de:
-  hello: "Hallo Welt!"
+  hello:  Hallo Welt!
+  home:   Startseite
 
   locales:
     de:   Deutsch

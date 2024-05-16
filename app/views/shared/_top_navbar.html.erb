@@ -4,7 +4,7 @@
     <div class='p-2'>
       <%= link_to root_path do %>
         <i class="fa-solid fa-house fa-2x" style="color:navy"></i>
-        <%= t(:home) %>
+        <%#= t(:home) %>
       <% end %>
     </div>
 
@@ -25,7 +25,7 @@
           data-transition-leave-from="opacity-100 scale-100"
           data-transition-leave-to="opacity-0 scale-95"
         >
-          <%= link_to 'First', '#', :'data-action' => 'dropdown#toggle', class: 'flex' %>
+          <%= link_to t(:gender, count: 2), '#', :'data-action' => 'dropdown#toggle', class: 'flex' %>
           <%= link_to 'Second', '#', :'data-action' => 'dropdown#toggle', class: 'flex' %>
           <%= link_to 'Third Third','#', :'data-action' => 'dropdown#toggle', class: 'flex' %>
         </div>

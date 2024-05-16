@@ -1,9 +1,17 @@
-<div class='container p-4'>
+<div class='container p-8'>
 
-  <h1 class="font-bold text-4xl text-center">Home</h1>
+  <h1 class="font-bold text-4xl text-center"><%= t(:home) %></h1>
+  <h2 class='text-center'><%= t(:hello) %></h2>
 
-  <h2><%= t(:hello) %></h2>
-  <% (1..50).each do |i| %>
-    <p class='text-center'><%= "line #{i}" %></p>
-  <% end %>
+  <div class="grid md:grid-cols-3 gap-4">
+    <div>
+       <%= image_tag "logos/rails_propshaft.png", class: "bject-contain h-48 w-96 rounded-lg" %>
+    </div>
+    <div>
+       <%= image_tag "logos/hotwire.png", class: "bject-contain h-48 w-96 rounded-lg" %>
+    </div>
+    <div>
+       <%= image_tag "logos/tailwind.png", class: "bject-contain h-48 w-96 rounded-lg" %>
+    </div>
+  </div>
 </div>
