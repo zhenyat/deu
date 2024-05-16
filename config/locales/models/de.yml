@@ -1,0 +1,131 @@
+de:
+  activerecord:
+    models:
+      article:
+        one:       Artikel
+        other:     Artikel
+      definite_article:
+        one:      Bestimmter Artikel
+        other:    Bestimmte Artikel
+      indefinite_article:
+        one:      Unbestimmter Artikel
+        other:    Unbestimmte Artikel
+
+      case:
+        one:      Kasus / Fall
+        other:    Kasus / Fälle
+
+      gender:
+        one:      Genus / Geschlecht
+        other:    Genera / Geschlechter
+
+      number:
+        one:      Nummer
+        other:    Nummern
+
+      part_of_speech:
+        one:      Teil der Rede
+        other:    Teile der Rede
+  
+      person:
+        one:      Person
+        other:    Personen
+
+      personal_pronoun:
+        one:      Personalpronomen
+        other:    Personalpronomen
+
+      possessive_pronoun:
+        one:      Possessivpronomen
+        other:    Possessivpronomen
+
+      stem_vowel:
+        one:      Stammvokal
+        other:    Stammvokale
+
+      verb:
+        one:      Verb
+        other:    Verben
+
+    attributes:
+      article:
+        de:           Deutsch
+        kinds:
+          definite:   Bestimmter Artikel
+          indefinite: Unbestimmter Artikel
+
+      case:
+        de:       Deutsch
+        en:       Englisch
+        ru:       Russisch
+        abbr_de:  Deutsche Abkürzung
+        abbr_en:  Englische Abkürzung
+        abbr_ru:  Russische Abkürzung 
+        questions_de: Fragen auf Deutsch
+        questions_en: Fragen auf Englisch
+        questions_ru: Fragen auf Russisch
+
+      gender:
+        de:       Deutsch
+        en:       Englisch
+        ru:       Russisch
+        abbr_de:  Deutsche Abkürzung
+        abbr_en:  Englische Abkürzung
+        abbr_ru:  Russische Abkürzung
+
+      number:
+        de:       Deutsch
+        en:       Englisch
+        ru:       Russisch
+        abbr_de:  Deutsche Abkürzung
+        abbr_en:  Englische Abkürzung
+        abbr_ru:  Russische Abkürzung
+
+      person:
+        de:       Deutsch
+        en:       Englisch
+        ru:       Russisch
+        abbr_de:  Deutsche Abkürzung
+        abbr_en:  Englische Abkürzung
+        abbr_ru:  Russische Abkürzung
+
+      personal_pronoun:
+        de:       Deutsch
+        en:       Englisch
+        ru:       Russisch
+
+      possessive_pronoun:
+        de:       Deutsch
+        en:       Englisch
+        ru:       Russisch
+        kinds:
+          as_article:   'Possessivpronomen als Artikel'
+          as_noun:      'Possessivpronomen als Substantive'
+
+      stem_vowel:
+        scheme:   Scheme  
+        assoc:    Verband  
+        sample:   Beispiel
+
+      verb:
+        part_of_speech: Teil der Rede
+        stem_vowel:     Stammvokal
+        infinitive:     Infinitiv  
+        present:        Präsens  
+        past:           Präteritum
+        participle:     Partizip II  
+        trascription:   Transkription
+        en:             Englische Übersetzung
+        ru:             Russische Übersetzung
+        form:           Form
+        forms:
+          irregular:  Unregelmäßig Verb
+          regular:    Regelmäßiges Verb
+          modal:      Modalverb
+
+        auxiliary:    Hilfsverb
+        prefix:       Präfix
+        prefixes:
+          na:           Unzutreffend
+          inseparable:  Untrennbar
+          separable:    Trennbar

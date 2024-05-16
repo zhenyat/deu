@@ -6,3 +6,11 @@ en:
     de:   German
     en:   English
     ru:   Russian
+
+  category:
+    one:       Category
+    other:     Categories
+
+  conjugation:    Conjugation
+  declension:     Declension
+  

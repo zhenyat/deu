@@ -6,3 +6,10 @@ ru:
     de:   Немецкий
     en:   Английский
     ru:   Русский
+
+  category:
+    one:       Категория
+    other:     Категории
+
+  conjugation:    Спряжение
+  declension:     Склонение

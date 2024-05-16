@@ -1,0 +1,126 @@
+en:
+  activerecord:
+    models:
+      article:
+        one:      Article
+        other:    Articles
+
+      case:
+        one:      Case
+        other:    Cases
+
+      gender:
+        one:      Gender
+        other:    Genders
+
+      number:
+        one:      Number
+        other:    Numbers
+
+      part_of_speech:
+        one:      Part of Speech
+        other:    Parts of Speech
+
+      person:
+        one:      Person
+        other:    Persons
+
+      personal_pronoun:
+        one:      Personal Pronoun
+        other:    Personal Pronouns
+
+      possessive_pronoun:
+        one:      Possessive Pronoun
+        other:    Possessive Pronouns
+
+      stem_vowel:
+        one:      Stem Vowel
+        other:    Stem Vowels
+
+      verb:
+        one:      Verb
+        other:    Verbs
+
+    attributes:
+      article:
+        de:           German
+        kinds:
+          definite:   Definite Article
+          indefinite: Indefinite Article
+
+      case:
+        de:       German
+        en:       English
+        ru:       Russian
+        abbr_de:  German abbreviation
+        abbr_en:  English abbreviation
+        abbr_ru:  Russian abbreviation
+        questions_de: Questions in German
+        questions_en: Questions in English
+        questions_ru: Questions in Russian
+
+      gender:
+        de:       German
+        en:       English
+        ru:       Russian
+        abbr_de:  German abbreviation
+        abbr_en:  English abbreviation
+        abbr_ru:  Russian abbreviation
+
+      number:
+        de:       German
+        en:       English
+        ru:       Russian
+        abbr_de:  German abbreviation
+        abbr_en:  English abbreviation
+        abbr_ru:  Russian abbreviation
+
+      part_of_speech:
+        one:      Part of Speech
+        other:    Parts of Speech
+
+      person:
+        de:       German
+        en:       English
+        ru:       Russian
+        abbr_de:  German abbreviation
+        abbr_en:  English abbreviation
+        abbr_ru:  Russian abbreviation
+
+      personal_pronoun:
+        de:       German
+        en:       English
+        ru:       Russian
+
+      possessive_pronoun:
+        de:       German
+        en:       English
+        ru:       Russian
+        kinds:
+          as_article:   'Possessive Pronouns as Articles'
+          as_noun:      'Possessive Pronouns as Nouns'
+
+      stem_vowel:
+        rule:     Scheme  
+        assoc:    Association  
+        sample:   Sample
+
+      verb:
+        infinitive:   Infinitive  
+        present:      Present time  
+        past:         Past time
+        participle:   Participle  
+        trascription: Trascription
+        en:           English Translation
+        ru:           Russian Translation
+        form:         Form
+        forms:
+          irregular:  Irregular verb
+          regular:    Regular verb
+          modal:      Modal verb
+        auxiliary:    Auxiliary verb
+        prefix:       Prefix
+        prefixes:
+          na:           Inapplicable
+          inseparable:  Inseparable
+          separable:    Separable

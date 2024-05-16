@@ -11,7 +11,7 @@
     <div class='p-2'>
       <div data-controller="dropdown" class="relative">
         <button type="button" data-action="dropdown#toggle click@window->dropdown#hide" class='flex items-center'>
-          Dropdown
+          <%= t(:category)[:other] %>
           <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
           </svg>
@@ -19,19 +19,24 @@
 
         <div
           data-dropdown-target="menu"
-          class="hidden transition transform origin-top-right absolute right-0 w-32 bg-white"
+          class="hidden transition transform origin-top-right absolute right-0 left-5 w-48 bg-white"
           data-transition-enter-from="opacity-0 scale-95"
           data-transition-enter-to="opacity-100 scale-100"
           data-transition-leave-from="opacity-100 scale-100"
           data-transition-leave-to="opacity-0 scale-95"
         >
-          <%= link_to t(:gender, count: 2), '#', :'data-action' => 'dropdown#toggle', class: 'flex' %>
-          <%= link_to 'Second', '#', :'data-action' => 'dropdown#toggle', class: 'flex' %>
-          <%= link_to 'Third Third','#', :'data-action' => 'dropdown#toggle', class: 'flex' %>
+          <%#= link_to Article.model_name.human(count: 2), '#', :'data-action' => 'dropdown#toggle', class: 'flex' %>
+          <%#= link_to Case.model_name.human(count: 2), '#', :'data-action' => 'dropdown#toggle', class: 'flex' %>
+          <%= link_to Gender.model_name.human(count: 2), genders_path, :'data-action' => 'dropdown#toggle', class: 'hover:bg-sky-200' %>
+          <%#= link_to Number.model_name.human(count: 2),'#', :'data-action' => 'dropdown#toggle', class: 'flex' %>
+          <%#= link_to Person.model_name.human(count: 2), '#', :'data-action' => 'dropdown#toggle', class: 'flex' %>
+          <%#= link_to Personal_pronoun.model_name.human(count: 2),'#', :'data-action' => 'dropdown#toggle', class: 'flex' %>
+          <%#= link_to Possessive_pronoun.model_name.human(count: 2),'#', :'data-action' => 'dropdown#toggle', class: 'flex' %>
         </div>
       </div>
     </div>
   </div>
+  
 
   <div class='flex'>
     <div class='p-2'>
@@ -55,7 +60,7 @@
             <% I18n. available_locales.each do |locale| %>
               <li>
                 <% if I18n.locale != locale %>
-                  <%= link_to t(locale, scope: 'locales'), url_for(locale: locale), :class => 'hover:bg-sky-200' %>
+                  <%= link_to t(locale, scope: 'locales'), url_for(locale: locale), class: 'hover:bg-sky-200' %>
                 <% end %>
               </li>
             <% end %> 

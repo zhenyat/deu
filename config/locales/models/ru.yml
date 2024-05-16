@@ -1,0 +1,129 @@
+ru:
+  activerecord:
+    models:
+      article:
+        one:     Артикль
+        other:   Артикли
+
+      case:
+        one:      Падеж
+        other:    Падежи
+
+      gender:
+        one:      Род
+        other:    Рода
+
+      number:
+        one:      Число
+        other:    Числа
+
+      part_of_speech:
+        one:      Часть речи
+        other:    Части речи
+
+      person:
+        one:      Лицо
+        other:    Лица
+
+      personal_pronoun:
+        one:      Личное местоимение
+        other:    Личные местоимения
+
+      possessive_pronoun:
+        one:      Притяжательное местоимение
+        other:    Притяжательные местоимения
+
+      stem_vowel:
+        one:      Корневая гласная
+        other:    Корневые гласные
+
+      verb:
+        one:      Глагол
+        other:    Глаголы
+
+    attributes:
+      article:
+        de:       Немецкий
+        kinds:
+          definite:   Определенный артикль
+          indefinite: Неопределенный артикль
+      case:
+        de:       Немецкий
+        en:       Английский
+        ru:       Русский
+        abbr_de:  Немецкое сокращение
+        abbr_en:  Английское сокращение
+        abbr_ru:  Русское сокращение 
+        questions_de: Вопросы по-немецки
+        questions_en: Вопросы по-английски
+        questions_ru: Вопросы по-русски
+
+      gender:
+        de:       Немецкий
+        en:       Английский
+        ru:       Русский
+        abbr_de:  Немецкое сокращение
+        abbr_en:  Английское сокращение
+        abbr_ru:  Русское сокращение        
+
+      number:
+        de:       Немецкий
+        en:       Английский
+        ru:       Русский
+        abbr_de:  Немецкое сокращение
+        abbr_en:  Английское сокращение
+        abbr_ru:  Русское сокращение        
+
+      part_of_speech:
+        one:      Часть речи
+        other:    Части речи
+
+      person:
+        de:       Немецкий
+        en:       Английский
+        ru:       Русский
+        abbr_de:  Немецкое сокращение
+        abbr_en:  Английское сокращение
+        abbr_ru:  Русское сокращение        
+
+      personal_pronoun:
+      de:       Немецкий
+      en:       Английский
+      ru:       Русский
+
+      possessive_pronoun:
+        de:       Немецкий
+        en:       Английский
+        ru:       Русский
+        kinds:
+          as_article:   'Притяжательные местоимения как артикли'
+          as_noun:      'Притяжательные местоимения как существительные'
+
+      stem_vowel:
+        scheme:   Схема 
+        assoc:    Ассоциация
+        sample:   Пример
+
+      verb:
+        part_of_speech: Часть речи
+        stem_vowel:     Корневая гласная
+        infinitive:   Инфинитив  
+        present:      Настоящее время 
+        past:         Прошедшее время
+        participle:   Причастие  
+        trascription: Транскрипция
+        en:           Английский перевод
+        ru:           Русский перевод
+        form:         Форма глагола
+        forms:
+          irregular:  Неправильный
+          regular:    Правильный
+          modal:      Модальный
+        auxiliary:    Вспомогательный глагол
+        auxiliaries:
+
+        prefix:       Приставка
+        prefixes:
+          na:           Нeприменимо
+          inseparable:  Отделяемая
+          separable:    Неотделяемая
