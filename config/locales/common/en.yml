@@ -1,0 +1,7 @@
+en:
+  hello: "Hello world!"
+  
+  locales:
+    de:   German
+    en:   English
+    ru:   Russian
