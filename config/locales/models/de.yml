@@ -81,6 +81,14 @@ de:
         abbr_en:  Englische Abkürzung
         abbr_ru:  Russische Abkürzung
 
+      part_of_speech:
+        de:       Deutsch
+        en:       Englisch
+        ru:       Russisch
+        cmt_de:   Kommentar auf Deutsch
+        cmt_en:   Kommentar auf Englisch
+        cmt_ru:   Kommentar auf Russisch
+      
       person:
         de:       Deutsch
         en:       Englisch

@@ -76,8 +76,12 @@ en:
         abbr_ru:  Russian abbreviation
 
       part_of_speech:
-        one:      Part of Speech
-        other:    Parts of Speech
+        de:       German
+        en:       English
+        ru:       Russian
+        cmt_de:   Сomment in German
+        cmt_en:   Comment in English
+        cmt_ru:   Comment in Russian
 
       person:
         de:       German

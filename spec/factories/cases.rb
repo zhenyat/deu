@@ -9,6 +9,6 @@ FactoryBot.define do
     questions_de { "MyString" }
     questions_en { "MyString" }
     questions_ru { "MyString" }
-    description {"MyText"}
+    description { "MyText" }
   end
 end

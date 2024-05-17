@@ -10,6 +10,6 @@ RSpec.describe "Persons", type: :request do
 
   it "returns route error for locale 'fr'" do
     get "/fr/persons"
-    expect(response.status).to eq(404)
+    expect(response).to have_http_status(404)
   end
 end
