@@ -5,7 +5,7 @@
 #   20.05.2024  Zhenya
 ################################################################################
 class Gcase < ApplicationRecord
-  # has_many :articles
+  has_many :articles
   # has_many :personal_pronouns
   
   validates :de, presence: true, uniqueness: true

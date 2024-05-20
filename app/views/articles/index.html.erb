@@ -1,0 +1,58 @@
+<div class='container'>
+  <h1 class="mb-4 font-bold text-4xl pb-3"><%= Article.model_name.human count: 2 %></h1>
+
+  <h2 class="mb-3 font-bold text-3xl text-blue-500 pb-3"><%= Article.human_enum_name(:kind, :definite) %></h1>
+
+  <table class="min-w-full table-auto border border-collapse border-slate-500">
+    <thead class="text-xl text-gray-700 bg-gray-200">
+      <tr>
+        <th rowspan=2 scope="col" class="px-6 py-0 border border-slate-400"><%= Gcase.model_name.human %></th>
+        <th colspan=3 scope="col" class="px-6 py-0 border border-slate-400"><%= Number.find_by(en: 'singular').attributes[locale.to_s] %></th>
+        <th rowspan=2 scope="col" class="px-6 py-0 border border-slate-400"><%= Number.find_by(en: 'plural').attributes[locale.to_s] %></th>
+       </tr>
+       <tr>
+        <th scope="col" class="px-6 py-0 border border-slate-400"><%= Person.find_by(en: '1st person').attributes[locale.to_s] %></th>
+        <th scope="col" class="px-6 py-0 border border-slate-400"><%= Person.find_by(en: '2nd person').attributes[locale.to_s] %></th>
+        <th scope="col" class="px-6 py-0 border border-slate-400"><%= Person.find_by(en: '3rd person').attributes[locale.to_s] %></th>
+       </tr>
+    </thead>
+    <tbody>
+      <% @gcases.each do |kasus| %>
+        <tr class="text-xl bg-green-100 text-center even:bg-blue-50 odd:bg-green-50">
+          <td class="px-6 py-2"><%= kasus.abbr_de %></td>
+          <td><%= @definite_articles.find_by(gcase: kasus, number: Number.find_by(en: 'singular'), gender: Gender.find_by(en: 'masculine')).de %></td>
+          <td><%= @definite_articles.find_by(gcase: kasus, number: Number.find_by(en: 'singular'), gender: Gender.find_by(en: 'feminine')).de %></td>
+          <td><%= @definite_articles.find_by(gcase: kasus, number: Number.find_by(en: 'singular'), gender: Gender.find_by(en: 'neuter')).de %></td>
+          <td><%= @definite_articles.find_by(gcase: kasus, number: Number.find_by(en: 'plural'), gender: Gender.find_by(en: 'any')).de %></td>
+       </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <h2 class="mb-3 font-bold text-3xl text-blue-500 pt-8 pb-3"><%= Article.human_enum_name(:kind, :indefinite) %></h1>
+  <table class="min-w-full table-auto border border-collapse border-slate-500">
+    <thead class="text-xl text-gray-700 bg-gray-200">
+      <tr>
+        <th rowspan=2 scope="col" class="px-6 py-0 border border-slate-400"><%= Gcase.model_name.human %></th>
+        <th colspan='3' scope="col" class="px-6 py-0 border border-slate-400"><%= Number.find_by(en: 'singular').attributes[locale.to_s] %></th>
+        <th rowspan=2 cope="col" class="px-6 py-0 border border-slate-400"><%= Number.find_by(en: 'plural').attributes[locale.to_s] %></th>
+       </tr>
+       <tr>
+        <th scope="col" class="px-6 py-0 border border-slate-400"><%= Person.find_by(en: '1st person').attributes[locale.to_s] %></th>
+        <th scope="col" class="px-6 py-0 border border-slate-400"><%= Person.find_by(en: '2nd person').attributes[locale.to_s] %></th>
+        <th scope="col" class="px-6 py-0 border border-slate-400"><%= Person.find_by(en: '3rd person').attributes[locale.to_s] %></th>
+       </tr>
+    </thead>
+    <tbody>
+      <% @gcases.each do |kasus| %>
+        <tr class="text-xl bg-green-100 text-center even:bg-blue-50 odd:bg-green-50">
+          <td class="px-6 py-2"><%= kasus.abbr_de %></td>
+          <td><%= @indefinite_articles.find_by(gcase: kasus, number: Number.find_by(en: 'singular'), gender: Gender.find_by(en: 'masculine')).de %></td>
+          <td><%= @indefinite_articles.find_by(gcase: kasus, number: Number.find_by(en: 'singular'), gender: Gender.find_by(en: 'feminine')).de %></td>
+          <td><%= @indefinite_articles.find_by(gcase: kasus, number: Number.find_by(en: 'singular'), gender: Gender.find_by(en: 'neuter')).de %></td>
+          <td><%= @indefinite_articles.find_by(gcase: kasus, number: Number.find_by(en: 'plural'), gender: Gender.find_by(en: 'any')).de %></td>
+       </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

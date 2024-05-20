@@ -5,7 +5,7 @@
 #   16.05.2024  Zhenya
 ################################################################################
 class Gender < ApplicationRecord
-  # has_many :articles
+  has_many :articles
   # has_many :personal_pronouns
   # has_many :possessive_pronouns
 

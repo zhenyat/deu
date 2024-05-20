@@ -13,4 +13,8 @@ RSpec.describe PartOfSpeech, type: :model do
     it { should validate_uniqueness_of(:en) }
     it { should validate_uniqueness_of(:ru) }
   end
+
+  context "validations of hassd_many" do
+    it { should have_many(:articles) }
+  end
 end

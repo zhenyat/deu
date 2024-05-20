@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Gcase, type: :model do
-  context "validations" do
+  context "validations of presence" do
     it { should validate_presence_of(:de) }
     it { should validate_presence_of(:en) }
     it { should validate_presence_of(:ru) }
@@ -24,5 +24,9 @@ RSpec.describe Gcase, type: :model do
     it { should validate_uniqueness_of(:questions_de) }
     it { should validate_uniqueness_of(:questions_en) }
     it { should validate_uniqueness_of(:questions_ru) }
+  end
+
+  context "validations of hassd_many" do
+    it { should have_many(:articles) }
   end
 end

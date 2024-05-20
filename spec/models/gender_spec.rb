@@ -19,4 +19,8 @@ RSpec.describe Gender, type: :model do
     it { should validate_uniqueness_of(:abbr_en) }
     it { should validate_uniqueness_of(:abbr_ru) }
   end
+
+  context "validations of hassd_many" do
+    it { should have_many(:articles) }
+  end
 end
