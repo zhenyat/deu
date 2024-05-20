@@ -26,7 +26,7 @@
           data-transition-leave-to="opacity-0 scale-95"
         >
           <%#= link_to Article.model_name.human(count: 2), '#', :'data-action' => 'dropdown#toggle', class: 'flex hover:bg-sky-200' %>
-          <%= link_to Case.model_name.human(count: 2), cases_path, :'data-action' => 'dropdown#toggle', class: 'flex hover:bg-sky-200' %>
+          <%= link_to Gcase.model_name.human(count: 2), gcases_path, :'data-action' => 'dropdown#toggle', class: 'flex hover:bg-sky-200' %>
           <%= link_to Gender.model_name.human(count: 2), genders_path, :'data-action' => 'dropdown#toggle', class: 'flex hover:bg-sky-200' %>
           <%= link_to Number.model_name.human(count: 2), numbers_path, :'data-action' => 'dropdown#toggle', class: 'flex hover:bg-sky-200' %>
           <%= link_to Person.model_name.human(count: 2), persons_path, :'data-action' => 'dropdown#toggle', class: 'flex hover:bg-sky-200' %>

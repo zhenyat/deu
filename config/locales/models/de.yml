@@ -11,7 +11,7 @@ de:
         one:      Unbestimmter Artikel
         other:    Unbestimmte Artikel
 
-      case:
+      gcase:
         one:      Kasus / Fall
         other:    Kasus / Fälle
 
@@ -54,7 +54,7 @@ de:
           definite:   Bestimmter Artikel
           indefinite: Unbestimmter Artikel
 
-      case:
+      gcase:
         de:       Deutsch
         en:       Englisch
         ru:       Russisch

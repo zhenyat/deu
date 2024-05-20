@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :case do
+  factory :gcase do
     de { "MyString" }
     en { "MyString" }
     ru { "MyString" }

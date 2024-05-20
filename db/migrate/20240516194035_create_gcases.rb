@@ -1,6 +1,6 @@
-class CreateCases < ActiveRecord::Migration[7.1]
+class CreateGcases < ActiveRecord::Migration[7.1]
   def change
-    create_table :cases do |t|
+    create_table :gcases do |t|
       t.string :de, null: false, index: {unique: true}
       t.string :en, null: false, index: {unique: true}
       t.string :ru, null: false, index: {unique: true}
@@ -10,6 +10,7 @@ class CreateCases < ActiveRecord::Migration[7.1]
       t.string :questions_de, null: false, index: {unique: true}
       t.string :questions_en, null: false, index: {unique: true}
       t.string :questions_ru, null: false, index: {unique: true}
+      t.text :description
 
       t.timestamps
     end

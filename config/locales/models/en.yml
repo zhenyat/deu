@@ -5,7 +5,7 @@ en:
         one:      Article
         other:    Articles
 
-      case:
+      gcase:
         one:      Case
         other:    Cases
 
@@ -48,7 +48,7 @@ en:
           definite:   Definite Article
           indefinite: Indefinite Article
 
-      case:
+      gcase:
         de:       German
         en:       English
         ru:       Russian

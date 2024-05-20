@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Case, type: :model do
+RSpec.describe Gcase, type: :model do
   context "validations" do
     it { should validate_presence_of(:de) }
     it { should validate_presence_of(:en) }
@@ -14,7 +14,7 @@ RSpec.describe Case, type: :model do
   end
   
   context "validations of uniqueness" do 
-    subject { FactoryBot.build(:case) }   #
+    subject { FactoryBot.build(:gcase) }   #
     it { should validate_uniqueness_of(:de) }
     it { should validate_uniqueness_of(:en) }
     it { should validate_uniqueness_of(:ru) }

@@ -5,7 +5,7 @@ ru:
         one:     Артикль
         other:   Артикли
 
-      case:
+      gcase:
         one:      Падеж
         other:    Падежи
 
@@ -47,7 +47,7 @@ ru:
         kinds:
           definite:   Определенный артикль
           indefinite: Неопределенный артикль
-      case:
+      gcase:
         de:       Немецкий
         en:       Английский
         ru:       Русский

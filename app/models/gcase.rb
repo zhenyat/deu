@@ -1,10 +1,10 @@
 ################################################################################
-#   Model Case
+#   Model Gcase: Grammatical Case
 #       Four values:  Nominativ, Akkusativ, Dativ, Genitiv
 #
-#   16.05.2024  Zhenya
+#   20.05.2024  Zhenya
 ################################################################################
-class Case < ApplicationRecord
+class Gcase < ApplicationRecord
   # has_many :articles
   # has_many :personal_pronouns
   
