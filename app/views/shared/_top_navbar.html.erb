@@ -56,16 +56,9 @@
           data-transition-leave-to="opacity-0 scale-95"
         >
           <% localized_parts_of_speech.each do |pos| %>
-            <%= link_to pos[I18n.locale.to_s], pos[:en].parameterize.underscore.pluralize, :'data-action' => 'dropdown#toggle', class: 'flex hover:bg-sky-200' %>
-
-          
+            <%= link_to pos[I18n.locale.to_s], pos[:en].parameterize(separator: '_').pluralize, :'data-action' => 'dropdown#toggle', class: 'flex hover:bg-sky-200' %>
           <% end %>
-          
-          <%#= link_to Article.model_name.human(count: 2), '#', :'data-action' => 'dropdown#toggle', class: 'flex hover:bg-sky-200' %>
-          <%#= select(:part_of_speech, PartOfSpeech.all.collect {|pos| [ pos.de, pos.id ] }, { include_blank: false }) %>
-          <%#= options_from_collection_for_select(PartOfSpeech.all, :id, :de) %>
         </div>
-        <%#>= collection_select(:part_of_speech, :part_of_speech_id, PartOfSpeech.all.order(locale.to_s), :id, locale, {:prompt => PartOfSpeech.model_name.human(count: 2)})%>
       </div>
     </div>
   </div>
