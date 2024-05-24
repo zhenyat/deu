@@ -1,0 +1,6 @@
+de:
+  header:
+    actions:        Aktionen
+    editing:        'Edit %{model}'
+    new:            'Neues %{model}'
+    view:           '%{model}'

@@ -1,0 +1,7 @@
+en:
+  header:
+    actions:        Actions
+    editing:        'Edit %{model}'
+    new:            'New %{model}'
+    view:           '%{model}'
+    

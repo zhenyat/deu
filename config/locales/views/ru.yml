@@ -1,0 +1,6 @@
+ru:
+  header:
+    actions:        Действия
+    editing:        'Редактировать %{model}'
+    new:            'Создать %{model}'
+    view:           '%{model}'

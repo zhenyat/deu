@@ -19,6 +19,10 @@ de:
         one:      Genus / Geschlecht
         other:    Genera / Geschlechter
 
+      noun:
+        one:      Substantiv
+        other:    Substantive
+        
       number:
         one:      Nummer
         other:    Nummern
@@ -72,6 +76,15 @@ de:
         abbr_de:  Deutsche Abkürzung
         abbr_en:  Englische Abkürzung
         abbr_ru:  Russische Abkürzung
+
+      noun:
+        de:             Deutsch
+        en:             Englisch
+        ru:             Russisch
+        transcription:  Transkription
+        plural:         Plural
+        ending:         Pluralende
+        comment:        Kommentar
 
       number:
         de:       Deutsch

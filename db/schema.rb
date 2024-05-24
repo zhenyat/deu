@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_20_142201) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_23_172015) do
   create_table "articles", force: :cascade do |t|
     t.integer "part_of_speech_id", null: false
     t.integer "gcase_id", null: false
@@ -67,6 +67,22 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_20_142201) do
     t.index ["ru"], name: "index_genders_on_ru", unique: true
   end
 
+  create_table "nouns", force: :cascade do |t|
+    t.integer "part_of_speech_id", null: false
+    t.integer "gender_id", null: false
+    t.string "de", null: false
+    t.string "en", null: false
+    t.string "ru", null: false
+    t.string "transcription"
+    t.string "plural"
+    t.string "ending"
+    t.string "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["gender_id"], name: "index_nouns_on_gender_id"
+    t.index ["part_of_speech_id"], name: "index_nouns_on_part_of_speech_id"
+  end
+
   create_table "numbers", force: :cascade do |t|
     t.string "de", null: false
     t.string "en", null: false
@@ -119,4 +135,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_20_142201) do
   add_foreign_key "articles", "genders"
   add_foreign_key "articles", "numbers"
   add_foreign_key "articles", "parts_of_speech"
+  add_foreign_key "nouns", "genders"
+  add_foreign_key "nouns", "parts_of_speech"
 end

@@ -1,0 +1,63 @@
+<%= form_with(model: noun, class: "contents") do |form| %>
+  <% if noun.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <h2><%= pluralize(noun.errors.count, "error") %> prohibited this noun from being saved:</h2>
+
+      <ul>
+        <% noun.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="my-5">
+    <%#= form.text_field :part_of_speech_id, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= collection_select(:noun, :part_of_speech_id, localized_parts_of_speech, :id, locale)%>
+  </div>    
+
+  <div class="my-5">
+    <%= form.label :gender_id, Gender.model_name.human(count: 1) %>
+    <%#= form.label :gender_id %>
+    <%= collection_select(:noun, :gender_id, Gender.all, :id, locale) %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :de %>
+    <%= form.text_field :de, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :en %>
+    <%= form.text_field :en, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :ru %>
+    <%= form.text_field :ru, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :transcription %>
+    <%= form.text_field :transcription, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :plural %>
+    <%= form.text_field :plural, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :ending %>
+    <%= form.text_field :ending, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :comment %>
+    <%= form.text_field :comment, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="inline">
+    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+  </div>
+<% end %>
