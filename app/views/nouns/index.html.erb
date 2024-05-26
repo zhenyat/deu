@@ -7,14 +7,16 @@
 
   <div class="flex justify-between items-center">
     <h1 class="font-bold text-4xl"><%= Noun.model_name.human(count: 2) %></h1>
-    <%= link_to "New noun", new_noun_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+    <%= link_to(new_noun_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium") do %>
+      <i class="fa-solid fa-plus"></i>
+    <% end %>
   </div>
 
   <div id="nouns" class="min-w-full">
     <% @nouns.each do |noun| %>
       <%= render noun %>
       <p>
-        <%= link_to "Show this noun", noun, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+        <%= link_to t('buttons.show'), noun, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
       </p>
     <% end %>
   </div>

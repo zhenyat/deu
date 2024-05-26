@@ -6,6 +6,8 @@
 ################################################################################
 class Gender < ApplicationRecord
   has_many :articles
+  has_many :nouns
+
   # has_many :personal_pronouns
   # has_many :possessive_pronouns
 

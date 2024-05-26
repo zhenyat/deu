@@ -6,10 +6,11 @@
 
     <%= render @noun %>
 
-    <%= link_to "Edit this noun", edit_noun_path(@noun), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to "Back to nouns", nouns_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to t('buttons.edit'), edit_noun_path(@noun), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to t('buttons.back'), nouns_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <div class="inline-block ml-2">
-      <%= button_to "Destroy this noun", @noun, method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+      <%= button_to t('buttons.destroy'), @noun, method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium",
+            form: { data: { turbo_confirm: t('messages.confirm') } } %>
     </div>
   </div>
 </div>

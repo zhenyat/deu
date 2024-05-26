@@ -1,6 +1,23 @@
 ru:
+  buttons:
+    back:           К списку
+    create:         Создать
+    destroy:        Удалить
+    edit:           Редактировать
+    new:            Новый
+    save:           Сохранить
+    show:           Показать
+
   header:
     actions:        Действия
     editing:        'Редактировать %{model}'
     new:            'Создать %{model}'
     view:           '%{model}'
+
+  messages:
+    created:        'Объект %{model} успрешно создан'
+    confirm:        'Уверены?'
+    deleted:        'Объект %{model} успешно удален'
+    updated:        'Объект %{model} успешно обновлен'
+    uploaded:       Файл успешно загружен
+    error_notification: 'Что-то пошло не так'

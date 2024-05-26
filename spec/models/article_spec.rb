@@ -5,7 +5,7 @@ RSpec.describe Article, type: :model do
     it { should validate_presence_of(:de) }
   end
 
-  context "validations of belongs to" do
+  context "validations of belongs_to associations" do
     it { should belong_to :part_of_speech }
     it { should belong_to :gender }
     it { should belong_to :number }

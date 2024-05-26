@@ -1,6 +1,23 @@
 de:
+  buttons:
+    back:           Auflisten
+    create:         Erstellen
+    destroy:        Zerstören
+    edit:           Bearbeiten
+    new:            Neu
+    save:           Speichern
+    show:           Zeigen
+
   header:
     actions:        Aktionen
     editing:        'Edit %{model}'
     new:            'Neues %{model}'
     view:           '%{model}'
+
+  messages:
+    created:        '%{model} wurde erfolgreich erstellt'
+    confirm:        'Bist du sicher?'
+    deleted:        '%{model} wurde erfolgreich gelöscht'
+    updated:        '%{model} wurde erfolgreich aktualisiert'
+    uploaded:       File wurde erfolgreich hochgeladen
+    error_notification: 'Etwas ist schief gelaufen'

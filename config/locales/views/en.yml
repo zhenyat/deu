@@ -1,7 +1,23 @@
 en:
+  buttons:
+    back:           To List
+    create:         Create
+    destroy:        Destroy
+    edit:           Edit
+    new:            New
+    save:           Save
+    show:           Show
+
   header:
     actions:        Actions
     editing:        'Edit %{model}'
     new:            'New %{model}'
     view:           '%{model}'
-    
+
+  messages:
+    created:        '%{model} was successfully created'
+    confirm:        'Are you sure?'
+    deleted:        '%{model} was successfully deleted'
+    updated:        '%{model} was successfully updated'
+    uploaded:       File was successfully uploaded
+    error_notification: 'Something went wrong'

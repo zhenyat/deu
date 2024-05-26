@@ -20,7 +20,8 @@ RSpec.describe Gender, type: :model do
     it { should validate_uniqueness_of(:abbr_ru) }
   end
 
-  context "validations of hassd_many" do
+  context "validations of has_many associations" do
     it { should have_many(:articles) }
+    it { should have_many(:nouns) }
   end
 end
