@@ -7,8 +7,6 @@ class CreateNouns < ActiveRecord::Migration[7.1]
       t.string :en, null: false
       t.string :ru, null: false
       t.string :transcription
-      t.string :plural
-      t.string :ending
       t.string :comment
 
       t.timestamps

@@ -42,21 +42,33 @@
     <%= form.text_field :transcription, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
-  <div class="my-5">
+  <!--div class="my-5">
     <%= form.label :plural %>
     <%= form.text_field :plural, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
+  </div-->
 
-  <div class="my-5">
+  <!--div class="my-5">
     <%= form.label :ending %>
     <%= form.text_field :ending, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
+  </div-->
 
   <div class="my-5">
     <%= form.label :comment %>
     <%= form.text_field :comment, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
+  <%= form.fields_for :pets do |declensions_subform| %>
+    <div class="my-5">
+      <%= declensions_subform.label :name %>
+      <%= declensions_subform.text_field :name, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+
+    <div class="my-5">
+      <%= pet_subform.label :breed %>
+      <%= pet_subform.text_field :breed, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+  <% end %>
+  
   <div class="inline">
     <%= form.submit t('buttons.create'), class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
   </div>

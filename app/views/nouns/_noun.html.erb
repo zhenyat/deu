@@ -1,35 +1,40 @@
 <div id="<%= dom_id noun %>">
 
-  <div class="grid grid-cols-4 gap-4 my-2">
-    <div class="col-span-2"><%= "#{noun.class.human_attribute_name('de')}:" %></div>
-    <strong style="color: teal">
-      <%= noun.de %>
-      <%= fine_transcription(noun.transcription) %>
-    </strong>
+  <div class="grid grid-cols-2 gap-4 my-2 text-lg">
+    <div><%= "#{noun.class.human_attribute_name('de')}:" %></div>
+    <%#= show_noun_de(noun) %>
+    <div>
+      <strong style="color: blue">
+        <%= show_article(noun) %>
+        <%= noun.de %> 
+         &emsp;
+        <%= fine_transcription(noun.transcription) %>
+      </strong>
+    </div>
   </div>
   
-  <div class="grid grid-cols-4 gap-4 my-2">
-    <div class="col-span-2"><%= "#{Gender.model_name.human(count: 1)}:" %></div>
+  <div class="grid grid-cols-2 gap-4 my-2">
+    <div><%= "#{Gender.model_name.human(count: 1)}:" %></div>
     <strong><%= noun.gender[locale] %></strong>
   </div>
 
-  <div class="grid grid-cols-4 gap-4 my-2">
-    <div class="col-span-2"><%= "#{noun.class.human_attribute_name('en')}:" %></div>
+  <div class="grid grid-cols-2 gap-4 my-2">
+    <div><%= "#{noun.class.human_attribute_name('en')}:" %></div>
     <strong><%= noun.en %></strong>
   </div>
 
-  <div class="grid grid-cols-4 gap-4 my-2">
-    <div class="col-span-2"><%= "#{noun.class.human_attribute_name('ru')}:" %></div>
+  <div class="grid grid-cols-2 gap-4 my-2">
+    <div><%= "#{noun.class.human_attribute_name('ru')}:" %></div>
     <strong><%= noun.ru %></strong>
   </div>
 
-  <div class="grid grid-cols-4 gap-4 my-2">
+  <!--div class="grid grid-cols-4 gap-4 my-2">
     <div class="col-span-2"><%= "#{noun.class.human_attribute_name('plural')}:" %></div>
-    <strong><%= with_ending(noun) %></strong>
-  </div>
+    <strong><%#= with_ending(noun) %></strong>
+  </div-->
 
-  <div class="grid grid-cols-4 gap-4 my-2">
-    <div class="col-span-2"><%= "#{noun.class.human_attribute_name('comment')}:" %></div>
+  <div class="grid grid-cols-2 gap-4 my-2">
+    <div><%= "#{noun.class.human_attribute_name('comment')}:" %></div>
     <strong><%= noun.comment %></strong>
   </div>
 </div>

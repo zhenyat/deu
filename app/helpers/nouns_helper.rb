@@ -1,7 +1,7 @@
 module NounsHelper
-  def ending(noun)
-    "<b><font color='red'>#{noun.ending}</font></b>".html_safe
-  end
+  # def ending(noun)
+  #   "<b><font color='red'>#{noun.ending}</font></b>".html_safe
+  # end
 
   def declension_singular noun, gcase_abbr_de
     number = Number.find_by(de: 'Singular')
@@ -22,5 +22,13 @@ module NounsHelper
     )
     # "#{article.de} #{noun.de}"
     "#{article.de} #{noun.de}"
+  end
+
+  def show_article noun
+    Article.find_by(gcase: Gcase.find_by(en: 'nominative'), number: Number.find_by(en: 'singular'),gender: noun.gender).de
+  end
+
+  def show_noun_de noun
+    content_tag(:div, content_tag(:div, show_article(noun) + " " + noun.de + " " + fine_transcription(noun.transcription)), class: "border-2", style: "color: blue")
   end
 end

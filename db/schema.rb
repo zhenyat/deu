@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_23_172015) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_29_130159) do
   create_table "articles", force: :cascade do |t|
     t.integer "part_of_speech_id", null: false
     t.integer "gcase_id", null: false
@@ -67,6 +67,20 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_23_172015) do
     t.index ["ru"], name: "index_genders_on_ru", unique: true
   end
 
+  create_table "noun_declensions", force: :cascade do |t|
+    t.integer "noun_id", null: false
+    t.integer "gcase_id", null: false
+    t.integer "number_id", null: false
+    t.integer "kind", limit: 1, default: 0, null: false
+    t.string "ending", null: false
+    t.string "de", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["gcase_id"], name: "index_noun_declensions_on_gcase_id"
+    t.index ["noun_id"], name: "index_noun_declensions_on_noun_id"
+    t.index ["number_id"], name: "index_noun_declensions_on_number_id"
+  end
+
   create_table "nouns", force: :cascade do |t|
     t.integer "part_of_speech_id", null: false
     t.integer "gender_id", null: false
@@ -74,8 +88,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_23_172015) do
     t.string "en", null: false
     t.string "ru", null: false
     t.string "transcription"
-    t.string "plural"
-    t.string "ending"
     t.string "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -135,6 +147,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_23_172015) do
   add_foreign_key "articles", "genders"
   add_foreign_key "articles", "numbers"
   add_foreign_key "articles", "parts_of_speech"
+  add_foreign_key "noun_declensions", "gcases"
+  add_foreign_key "noun_declensions", "nouns"
+  add_foreign_key "noun_declensions", "numbers"
   add_foreign_key "nouns", "genders"
   add_foreign_key "nouns", "parts_of_speech"
 end
