@@ -1,5 +1,5 @@
 <div class='container'>
-  <h1 class="mb-4 font-bold text-4xl pb-3"><%= Article.model_name.human count: 2 %></h1>
+  <h1 class="mb-4 font-bold text-4xl pb-3"><%= "#{Article.model_name.human count: 2}: #{t(:declension)}" %></h1>
 
   <h2 class="mb-3 font-bold text-3xl text-blue-500 pb-3"><%= Article.human_enum_name(:kind, :definite) %></h1>
 
@@ -23,7 +23,7 @@
           <td><%= @definite_articles.find_by(gcase: kasus, number: Number.find_by(en: 'singular'), gender: Gender.find_by(en: 'masculine')).de %></td>
           <td><%= @definite_articles.find_by(gcase: kasus, number: Number.find_by(en: 'singular'), gender: Gender.find_by(en: 'feminine')).de %></td>
           <td><%= @definite_articles.find_by(gcase: kasus, number: Number.find_by(en: 'singular'), gender: Gender.find_by(en: 'neuter')).de %></td>
-          <td><%= @definite_articles.find_by(gcase: kasus, number: Number.find_by(en: 'plural'), gender: Gender.find_by(en: 'any')).de %></td>
+          <td><%= @definite_articles.find_by(gcase: kasus, number: Number.find_by(en: 'plural'), gender: Gender.find_by(en: 'other')).de %></td>
        </tr>
       <% end %>
     </tbody>
@@ -50,7 +50,7 @@
           <td><%= @indefinite_articles.find_by(gcase: kasus, number: Number.find_by(en: 'singular'), gender: Gender.find_by(en: 'masculine')).de %></td>
           <td><%= @indefinite_articles.find_by(gcase: kasus, number: Number.find_by(en: 'singular'), gender: Gender.find_by(en: 'feminine')).de %></td>
           <td><%= @indefinite_articles.find_by(gcase: kasus, number: Number.find_by(en: 'singular'), gender: Gender.find_by(en: 'neuter')).de %></td>
-          <td><%= @indefinite_articles.find_by(gcase: kasus, number: Number.find_by(en: 'plural'), gender: Gender.find_by(en: 'any')).de %></td>
+          <td><%= @indefinite_articles.find_by(gcase: kasus, number: Number.find_by(en: 'plural'), gender: Gender.find_by(en: 'other')).de %></td>
        </tr>
       <% end %>
     </tbody>
