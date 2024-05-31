@@ -2,15 +2,8 @@
 
   <div class="grid grid-cols-2 gap-4 my-2 text-lg">
     <div><%= "#{noun.class.human_attribute_name('de')}:" %></div>
+    <%= show_noun_colorized noun %>
     <%#= show_noun_de(noun) %>
-    <div>
-      <strong style="color: blue">
-        <%= show_article(noun) %>
-        <%= noun.de %> 
-         &emsp;
-        <%= fine_transcription(noun.transcription) %>
-      </strong>
-    </div>
   </div>
   
   <div class="grid grid-cols-2 gap-4 my-2">
