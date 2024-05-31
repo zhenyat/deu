@@ -22,7 +22,11 @@ de:
       noun:
         one:      Substantiv
         other:    Substantive
-        
+
+      noun_declension:
+        one:      Deklination von Substantiv
+        other:    Deklinationen von Substantiven
+
       number:
         one:      Nummer
         other:    Nummern
@@ -86,6 +90,10 @@ de:
         ending:         Pluralende
         comment:        Kommentar
 
+      noun_declension:
+        singular:       Singular
+        plural:         Plural
+        
       number:
         de:       Deutsch
         en:       Englisch

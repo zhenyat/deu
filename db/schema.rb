@@ -70,15 +70,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_29_130159) do
   create_table "noun_declensions", force: :cascade do |t|
     t.integer "noun_id", null: false
     t.integer "gcase_id", null: false
-    t.integer "number_id", null: false
-    t.integer "kind", limit: 1, default: 0, null: false
-    t.string "ending", null: false
-    t.string "de", null: false
+    t.string "singular", null: false
+    t.string "plural", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["gcase_id"], name: "index_noun_declensions_on_gcase_id"
     t.index ["noun_id"], name: "index_noun_declensions_on_noun_id"
-    t.index ["number_id"], name: "index_noun_declensions_on_number_id"
   end
 
   create_table "nouns", force: :cascade do |t|
@@ -88,6 +85,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_29_130159) do
     t.string "en", null: false
     t.string "ru", null: false
     t.string "transcription"
+    t.integer "ending", limit: 1, default: 0, null: false
     t.string "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -149,7 +147,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_29_130159) do
   add_foreign_key "articles", "parts_of_speech"
   add_foreign_key "noun_declensions", "gcases"
   add_foreign_key "noun_declensions", "nouns"
-  add_foreign_key "noun_declensions", "numbers"
   add_foreign_key "nouns", "genders"
   add_foreign_key "nouns", "parts_of_speech"
 end

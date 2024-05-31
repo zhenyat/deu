@@ -8,7 +8,9 @@ Rails.application.routes.draw do
     resources :gcases,   only: :index
     resources :parts_of_speech, only: :index
     resources :articles, only: :index
-    resources :nouns
+    resources :nouns do
+      resources :noun_declensions
+    end
   end
   
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

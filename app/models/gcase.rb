@@ -6,6 +6,7 @@
 ################################################################################
 class Gcase < ApplicationRecord
   has_many :articles
+  has_many :noun_declensions
   # has_many :personal_pronouns
   
   validates :de, presence: true, uniqueness: true

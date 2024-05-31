@@ -10,11 +10,15 @@
 #   27.05.2024  Zhenya
 ################################################################################
 class Noun < ApplicationRecord
-  has_many   :noun_declensions
+  has_many :noun_declensions
   accepts_nested_attributes_for :noun_declensions, allow_destroy: true
+
   belongs_to :part_of_speech
   belongs_to :gender
 
+  # enum :ending, %w(es s e en Nichts)
+  enum :ending, { es: 0, s: 1, e: 2, en: 3, er: 4, Nichts: 4 }
+  
   validates :de, :en, :ru, presence: true
 
   # Not used

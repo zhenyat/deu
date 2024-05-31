@@ -17,6 +17,10 @@ en:
         one:      Noun
         other:    Nouns
 
+      noun_declension:
+        one:      Noun Declension
+        other:    Noun Declensions
+
       number:
         one:      Number
         other:    Numbers
@@ -79,6 +83,10 @@ en:
         plural:         Plural
         ending:         Plural ending
         comment:        Comment
+
+      noun_declension:
+        singular:       Singular
+        plural:         Plural
 
       number:
         de:       German

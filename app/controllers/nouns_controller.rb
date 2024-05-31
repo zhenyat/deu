@@ -14,7 +14,7 @@ class NounsController < ApplicationController
   def new
     @noun = Noun.new
     @noun.part_of_speech = PartOfSpeech.find_by en: 'noun'
-    # @nounh.noun_declensions.build
+    @noun.noun_declensions.build
   end
 
   # GET /nouns/1/edit
@@ -68,8 +68,8 @@ class NounsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def noun_params
       params.require(:noun).permit(
-        :part_of_speech_id, :gender_id, :de, :en, :ru, :transcription, :comment,
-        noun_declensions_attributes: [:id, :kind, :ending, :de, :_destroy]
+        :part_of_speech_id, :gender_id, :de, :en, :ru, :transcription, :ending, :comment,
+        noun_declensions_attributes: [:id, :gcase_id, :singular, :plural, :_destroy]
       )
     end
 end

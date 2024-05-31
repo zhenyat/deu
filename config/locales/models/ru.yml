@@ -13,13 +13,17 @@ ru:
         one:      Род
         other:    Рода
 
-      number:
-        one:      Число
-        other:    Числа
-
       noun:
         one:      Существительное
         other:    Существительные
+
+      noun_declension:
+        one:      Склонение существительного
+        other:    Склонение существительных
+
+      number:
+        one:      Число
+        other:    Числа
 
       part_of_speech:
         one:      Часть речи
@@ -78,6 +82,10 @@ ru:
         plural:         Множ. число
         ending:         Окончание во мн.ч. 
         comment:        Комментарий
+
+      noun_declension:
+        singular:       ед.ч
+        plural:         мн.ч
 
       number:
         de:       Немецкий

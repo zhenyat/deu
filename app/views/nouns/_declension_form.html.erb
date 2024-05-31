@@ -1,0 +1,28 @@
+<h2 class="font-bold text-xl py-4"><%= NounDeclension.model_name.human(count: 2) %></h2>
+
+
+    <table class="min-w-full table-auto">
+        <thead class="text-xl text-gray-700 bg-gray-200">
+            <tr>
+            <th scope="col" class="px-4 py-0"><%= Gcase.model_name.human %></th>
+            <th scope="col" class="px-4 py-0"><%= Number.find_by(en: 'singular')[locale].capitalize %></th>
+            <th scope="col" class="px-4 py-0"><%= Number.find_by(en: 'plural')[locale].capitalize %></th>
+            </tr>
+        </thead> 
+        <tbody>
+            <% Gcase.all.each do |gcase| %>
+                <% skip = false %>
+                <%= form.fields_for :noun_declensions do |noun_declension_subform| %>
+                    <% if skip == false # workaround %>
+                        <% skip = true %>
+                        <%= noun_declension_subform.hidden_field :gcase_id, value: gcase.id %>
+                        <tr>
+                            <td class='text-xl px-3 py-2 mt-2'><%= gcase.de %></td>
+                            <td><%= noun_declension_subform.text_field :singular, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %></td>
+                            <td><%= noun_declension_subform.text_field :plural, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %></td>
+                        </tr>
+                    <% end %>
+                <% end %>
+            <% end %>
+        </tbody>
+    </table>
