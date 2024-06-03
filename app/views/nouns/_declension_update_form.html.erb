@@ -1,12 +1,14 @@
 <table> 
     <tbody>
         <%= form.fields_for :noun_declensions do |noun_declension_subform| %>
+            <%# Get gcase_id from ActionView::Helpers::FormBuilder object%>
+            <% gcase_id = noun_declension_subform.object.gcase_id %>
             <tr>
-                <td class='text-xl px-3 py-2 mt-2'><%= noun_declension_subform.text_field :gcase_id, placeholder: "Your placeholder" %></td>
-                <td><%= noun_declension_subform.text_field :singular %><td>
-                <td><%= noun_declension_subform.text_field :plural %><td>
+                <%= noun_declension_subform.hidden_field :gcase_id %>
+                <td class='text-lg px-4 py-0 mt-2'><%= Gcase.find(gcase_id)[locale.to_sym].capitalize %></td>
+                <td class='text-lg px-4 py-0 mt-2'><%= noun_declension_subform.text_field :singular, class: "block shadow rounded-md border border-gray-400 outline-none px-4 py-2 mt-2 w-full" %><td>
+                <td class='text-lg px-4 py-0 mt-2'><%= noun_declension_subform.text_field :plural, class: "block shadow rounded-md border border-gray-400 outline-none px-4 py-2 mt-2 w-full" %><td>
             </tr>
-            <%#= noun_declension_subform.hidden_field :gcase_id, value: gcase.id %>
         <% end %>
     </tbody>
 </table>

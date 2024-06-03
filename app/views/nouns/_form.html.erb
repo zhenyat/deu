@@ -53,11 +53,11 @@
 
 <h2 class="font-bold text-xl py-4"><%= NounDeclension.model_name.human(count: 2) %></h2>
   <table class="min-w-full table-auto">
-      <thead class="text-xl text-gray-700 bg-gray-200">
+      <thead class="text-gray-700 bg-gray-200">
           <tr>
-          <th scope="col" class="px-4 py-0"><%= Gcase.model_name.human %></th>
-          <th scope="col" class="px-4 py-0"><%= Number.find_by(en: 'singular')[locale].capitalize %></th>
-          <th scope="col" class="px-4 py-0"><%= Number.find_by(en: 'plural')[locale].capitalize %></th>
+          <th scope="col" class="text-lg px-4 py-0 mt-2"><%= Gcase.model_name.human %></th>
+          <th scope="col" class="text-lg px-4 py-0 mt-2"><%= Number.find_by(en: 'singular')[locale].capitalize %></th>
+          <th scope="col" class="text-lg px-4 py-0 mt-2"><%= Number.find_by(en: 'plural')[locale].capitalize %></th>
           </tr>
       </thead>
   </table>
