@@ -1,8 +1,14 @@
 module NounsHelper
-  # def ending(noun)
-  #   "<b><font color='red'>#{noun.ending}</font></b>".html_safe
-  # end
+  # not used...
+  def ending(noun)
+    "<b><font color='red'>#{noun.ending}</font></b>".html_safe
+  end
 
+  def declension noun, gcase
+    noun.noun_declensions.find_by(gcase: gcase)
+  end
+
+  # not used...
   def declension_singular noun, gcase_abbr_de
     number = Number.find_by(de: 'Singular')
     article = Article.find_by(
@@ -13,6 +19,7 @@ module NounsHelper
     "#{article.de} #{noun.de}"
   end
   
+  # not used...
   def declension_plural noun, gcase_abbr_de
     number = Number.find_by(de: 'Plural')
     article = Article.find_by(

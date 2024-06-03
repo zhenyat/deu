@@ -1,0 +1,12 @@
+<table> 
+    <tbody>
+        <%= form.fields_for :noun_declensions do |noun_declension_subform| %>
+            <tr>
+                <td class='text-xl px-3 py-2 mt-2'><%= noun_declension_subform.text_field :gcase_id, placeholder: "Your placeholder" %></td>
+                <td><%= noun_declension_subform.text_field :singular %><td>
+                <td><%= noun_declension_subform.text_field :plural %><td>
+            </tr>
+            <%#= noun_declension_subform.hidden_field :gcase_id, value: gcase.id %>
+        <% end %>
+    </tbody>
+</table>

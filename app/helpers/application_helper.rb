@@ -10,7 +10,7 @@ module ApplicationHelper
   end
 
   def localized_parts_of_speech
-    PartOfSpeech.all.order(I18n.locale.to_s)
+    PartOfSpeech.all.order(locale.to_s)
   end
 
   def with_ending(object)

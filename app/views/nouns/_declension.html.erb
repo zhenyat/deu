@@ -3,9 +3,9 @@
   <table class="min-w-full table-auto border border-collapse border-slate-500">
     <thead class="text-xl text-gray-700 bg-green-200">
       <tr>
-        <th class="px-6 py-0 border border-slate-400"><%= Gcase.model_name.human %></th>
-        <th class="px-6 py-0 border border-slate-400">Singular</th>
-        <th class="px-6 py-0 border border-slate-400">Plural</th>
+        <th class="px-10 py-0 border border-slate-400"><%= Gcase.model_name.human %></th>
+        <th class="px-6 py-0 border border-slate-400"><%= Number.find_by(en: 'singular')[locale].capitalize %></th>
+        <th class="px-6 py-0 border border-slate-400"><%= Number.find_by(en: 'plural')[locale].capitalize %></th>
       </tr>
     </thead>     
     <tbody class='bg-green-100'>
