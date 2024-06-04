@@ -265,6 +265,9 @@ GEM
       prism (>= 0.23.0, < 0.28)
       sorbet-runtime (>= 0.5.10782)
     ruby-progressbar (1.13.0)
+    seed_dump (3.3.1)
+      activerecord (>= 4)
+      activesupport (>= 4)
     seedbank (0.5.0)
       rake (>= 10.0)
     shoulda-matchers (6.2.0)
@@ -321,6 +324,7 @@ DEPENDENCIES
   rubocop-shopify
   rubocop-thread_safety
   ruby-lsp
+  seed_dump
   seedbank
   shoulda-matchers (~> 6.2)
   sqlite3 (~> 1.4)
