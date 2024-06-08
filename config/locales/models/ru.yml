@@ -78,9 +78,15 @@ ru:
         de:             Немецкий
         en:             Английский
         ru:             Русский
+        ending:         Окончание существительного
+        kind:           Тип
+        kinds:          
+          regular:      правильное
+          irregular:    неправильное
+        level:          Уровень сертификата
+        pl_suffix:      Суффикс склонения (мн.ч.)
+        sg_suffix:      Суффикс склонения (ед.ч.)
         transcription:  Транскрипция
-        plural:         Множ. число
-        ending:         Окончание во мн.ч. 
         comment:        Комментарий
 
       noun_declension:

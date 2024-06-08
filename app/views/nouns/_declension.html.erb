@@ -12,8 +12,9 @@
       <% Gcase.all.each do |gcase| %>
         <tr>
           <td><%= gcase[locale].capitalize %></td>
-          <td><%= declension_singular(noun, gcase.abbr_de) %></td>
-          <td><%= declension_plural(noun, gcase.abbr_de) %><%= ending(noun) %> </td>
+          <td><%= noun.noun_declensions.find_by(gcase: gcase).singular %></td>
+          <td><%= noun.noun_declensions.find_by(gcase: gcase).plural %></td>
+          <!--td><%#= declension_plural(noun, gcase.abbr_de) %><%#= ending(noun) %> </td-->
         </tr>
       <% end %>
     </tbody>

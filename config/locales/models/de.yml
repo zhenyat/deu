@@ -4,9 +4,11 @@ de:
       article:
         one:       Artikel
         other:     Artikel
+
       definite_article:
         one:      Bestimmter Artikel
         other:    Bestimmte Artikel
+
       indefinite_article:
         one:      Unbestimmter Artikel
         other:    Unbestimmte Artikel
@@ -85,9 +87,15 @@ de:
         de:             Deutsch
         en:             Englisch
         ru:             Russisch
+        ending:         Substantivende
+        kind:           der Typ
+        kinds:          
+          regular:      regelmäßig
+          irregular:    unregelmäßig
+        level:          Zertifikatsniveau
+        pl_suffix:      Deklinationssuffix (plural)
+        sg_suffix:      Deklinationssuffix (singular)
         transcription:  Transkription
-        plural:         Plural
-        ending:         Pluralende
         comment:        Kommentar
 
       noun_declension:

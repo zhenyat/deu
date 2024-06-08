@@ -79,9 +79,15 @@ en:
         de:             German
         en:             English
         ru:             Russian
+        ending:         Noun's ending
+        kind:           Kind
+        kinds:          
+          regular:      regular
+          irregular:    irregular
+        level:          Certificate level
+        pl_suffix:      Declension suffix (plural)
+        sg_suffix:      Declension suffix (singular)
         transcription:  Transcription
-        plural:         Plural
-        ending:         Plural ending
         comment:        Comment
 
       noun_declension:

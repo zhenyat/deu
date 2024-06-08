@@ -11,10 +11,15 @@
     </div>
   <% end %>
 
-  <div class="my-5">
+  <div>
     <%= form.hidden_field :part_of_speech_id, value: PartOfSpeech.find_by(en: 'noun').id %>
     <%#= collection_select(:noun, :part_of_speech_id, localized_parts_of_speech, :id, locale)%>
   </div>    
+
+  <div class="my-5">
+    <%= form.label :level %>
+    <%= form.select :level, Noun.levels.keys %>
+  </div>
 
   <div class="my-5">
     <%= form.label :gender_id, Gender.model_name.human(count: 1) %>
@@ -44,6 +49,22 @@
   <div class="my-5">
     <%= form.label :ending %>
     <%= form.select :ending, Noun.endings.keys %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :kind %>
+    <%#= form.select :kind, Noun.kinds.keys %>
+    <%= form.select :kind, Noun.kinds.keys.map{|key| [I18n.t("activerecord.attributes.noun.kinds.#{key}".to_sym), key]}%>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :sg_suffix %>
+    <%= form.select :sg_suffix, Noun.sg_suffixes.keys %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :pl_suffix %>
+    <%= form.select :pl_suffix, Noun.pl_suffixes.keys %>
   </div>
 
   <div class="my-5">

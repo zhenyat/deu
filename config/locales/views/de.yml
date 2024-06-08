@@ -14,6 +14,12 @@ de:
     new:            'Neues %{model}'
     view:           '%{model}'
 
+# DIE TYPEN DER DEKLINATION VOM SUBSTANTIV
+# DIE STARKE DEKLINATION VOM SUBSTANTIV
+# DIE SCHWACHE DEKLINATION VOM SUBSTANTIV
+# DIE GEMISCHTE DEKLINATION VOM SUBSTANTIV
+#   DIE WEIBLICHE DEKLINATION VOM SUBSTANTIV
+
   messages:
     created:        '%{model} wurde erfolgreich erstellt'
     confirm:        'Bist du sicher?'

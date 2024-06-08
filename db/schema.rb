@@ -86,6 +86,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_29_130159) do
     t.string "ru", null: false
     t.string "transcription"
     t.integer "ending", limit: 1, default: 0, null: false
+    t.integer "level", limit: 1, default: 0, null: false
+    t.integer "kind", limit: 1, default: 0, null: false
+    t.integer "sg_suffix", limit: 1, default: 0, null: false
+    t.integer "pl_suffix", limit: 1, default: 0, null: false
     t.string "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

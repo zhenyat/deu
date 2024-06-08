@@ -69,7 +69,8 @@ class NounsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def noun_params
       params.require(:noun).permit(
-        :part_of_speech_id, :gender_id, :de, :en, :ru, :transcription, :ending, :comment,
+        :part_of_speech_id, :gender_id, :de, :en, :ru, :transcription, :ending, :level, 
+        :kind, :sg_suffix, :pl_suffix, :comment,
         noun_declensions_attributes: [:id, :gcase_id, :singular, :plural, :_destroy]
       )
     end

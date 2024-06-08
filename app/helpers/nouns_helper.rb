@@ -1,7 +1,7 @@
 module NounsHelper
   # not used...
   def ending(noun)
-    "<b><font color='red'>#{noun.ending}</font></b>".html_safe
+    "<b><font color='red'>#{noun.pl_suffix}</font></b>".html_safe
   end
 
   def declension noun, gcase
@@ -46,7 +46,7 @@ module NounsHelper
     else
       klass = "text-yellow-700 font-bold"
     end
-    content_tag(:div, content_tag(:div, show_article(noun) + " " + noun.de + " " + fine_transcription(noun.transcription)), class: klass)
+    content_tag(:div, content_tag(:div, show_article(noun) + " " + noun.de + " " + fine_transcription(noun.transcription)).html_safe, class: klass)
   end
 
   def show_noun_de noun
