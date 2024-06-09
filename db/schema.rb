@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_29_130159) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_09_092028) do
   create_table "articles", force: :cascade do |t|
     t.integer "part_of_speech_id", null: false
     t.integer "gcase_id", null: false
@@ -143,6 +143,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_29_130159) do
     t.index ["de"], name: "index_persons_on_de", unique: true
     t.index ["en"], name: "index_persons_on_en", unique: true
     t.index ["ru"], name: "index_persons_on_ru", unique: true
+  end
+
+  create_table "stem_vowels", force: :cascade do |t|
+    t.string "scheme", null: false
+    t.string "assoc"
+    t.string "sample"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["scheme"], name: "index_stem_vowels_on_scheme", unique: true
   end
 
   add_foreign_key "articles", "gcases"
