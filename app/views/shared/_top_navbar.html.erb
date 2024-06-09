@@ -56,7 +56,10 @@
           data-transition-leave-to="opacity-0 scale-95"
         >
           <% localized_parts_of_speech.each do |pos| %>
-            <%= link_to pos[I18n.locale.to_s].capitalize, "/#{locale}/#{pos[:en].parameterize(separator: '_').pluralize}", :'data-action' => 'dropdown#toggle', class: 'flex hover:bg-sky-200' %>
+            <% index = "#{pos[:en].parameterize(separator: '_').pluralize}" %>
+            <% if Rails.application.routes.url_helpers.respond_to?("#{index}_path") # Only available models %>
+              <%= link_to pos[I18n.locale.to_s].capitalize, index, :'data-action' => 'dropdown#toggle', class: 'flex hover:bg-sky-200' %>
+            <% end %>
           <% end %>
         </div>
       </div>
