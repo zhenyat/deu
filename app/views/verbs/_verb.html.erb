@@ -1,0 +1,57 @@
+<div id="<%= dom_id verb %>">
+
+  <div class="grid grid-cols-2 gap-4 my-2 text-lg">
+    <div><%= "#{StemVowel.model_name.human(count: 1)}:" %></div>
+    <strong><%= verb.stem_vowel.scheme %></strong>
+  </div>
+
+  <div class="grid grid-cols-2 gap-4 my-2 text-lg">
+    <div class="col-span-2"><%= "#{verb.class.human_attribute_name('infinitive')}:" %></div>
+    <strong><%= verb.infinitive %></strong>
+  </div>
+
+  <div class="grid grid-cols-2 gap-4 my-2 text-lg">
+    <div class="col-span-2"><%= "#{verb.class.human_attribute_name('present')}:" %></div>
+    <strong><%= verb.present %></strong>
+  </div>
+
+  <div class=" grid grid-cols-2 gap-4 my-2 text-lg">
+    <div class="col-span-2"><%= "#{verb.class.human_attribute_name('past')}:" %></div>
+    <strong><%= verb.past %></strong>
+  </div>
+
+  <div class="grid grid-cols-2 gap-4 my-2 text-lg">
+    <div class="col-span-2"><%= "#{verb.class.human_attribute_name('participle')}:" %></div>
+    <strong><%= verb.participle %></strong>
+  </div>
+
+  <div class="grid grid-cols-2 gap-4 my-2 text-lg">
+    <div class="col-span-2"><%= "#{verb.class.human_attribute_name('trascription')}:" %></div>
+    <strong><%= transcript(verb.trascription) %></strong>
+  </div>
+
+  <div class="grid grid-cols-2 gap-4 my-2 text-lg">
+    <div class="col-span-2"><%= "#{verb.class.human_attribute_name('ru')}:" %></div>
+    <strong><%= verb.ru %></strong>
+  </div>
+
+  <div class="grid grid-cols-2 gap-4 my-2 text-lg">
+    <div class="col-span-2"><%= "#{verb.class.human_attribute_name('en')}:" %></div>
+    <strong><%= verb.en %></strong>
+  </div>
+
+  <div class="grid grid-cols-2 gap-4 my-2 text-lg">
+    <div class="col-span-2"><%= "#{verb.class.human_attribute_name('form')}:" %></div>
+    <strong  class="col-span-2"><%= "#{verb.class.human_enum_name(:form, verb.form)}" %></strong>
+  </div>
+
+  <div class="grid grid-cols-2 gap-4 my-2 text-lg">
+    <div class="col-span-2"><%= "#{verb.class.human_attribute_name('auxiliary')}:" %></div>
+    <strong class="col-span-2"><%= verb.auxiliary %></strong>
+  </div>
+
+  <div class="grid grid-cols-2 gap-4 my-2 text-lg">
+    <div class="col-span-2"><%= "#{verb.class.human_attribute_name('prefix')}:" %></div>
+    <strong><%= "#{verb.class.human_enum_name(:prefix, verb.prefix)}" %></strong>
+  </div>
+</div>

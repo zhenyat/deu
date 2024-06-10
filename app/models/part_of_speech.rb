@@ -6,6 +6,7 @@
 class PartOfSpeech < ApplicationRecord
   has_many :articles
   has_many :nouns
+  has_many :verbs
   
   validates :de, :en, :ru, presence: true, uniqueness: true
 end

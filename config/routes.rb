@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :verbs
   get 'stem_vowels/index'
   
   scope "/:locale", locale: /#{I18n.available_locales.join("|")}/ do
@@ -13,6 +14,7 @@ Rails.application.routes.draw do
       resources :noun_declensions
     end
     resources :stem_vowels, only: :index
+    resources :verbs
   end
   
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
