@@ -1,0 +1,24 @@
+<table> 
+    <tbody>
+        <% Conjugation.personal_pronouns.each do |pp| %>
+            <%= form.fields_for :conjugations do |conjugation_subform| %>
+                <%= conjugation_subform.hidden_field :personal_pronoun, value: pp.first %>
+                <tr>
+                    <td class='text-xl font-bold text-red-700 px-4 py-0 mt-2'><%= pp.first %></td>
+                    <td class='text-xl px-4 py-0 mt-2'><%= conjugation_subform.text_field :present_simple,
+                        placeholder: Conjugation.human_attribute_name('present_simple'), 
+                        class: "block shadow rounded-md border border-gray-400 outline-none px-4 py-2 mt-2 w-full" %>
+                    </td>
+                    <td class='text-xl px-4 py-0 mt-2'><%= conjugation_subform.text_field :past_simple,
+                        placeholder: Conjugation.human_attribute_name('past_simple'),
+                        class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+                    </td>
+                    <td class='text-xl px-8 py-0 mt-2'><%= conjugation_subform.text_field :present_perfect,
+                        placeholder: Conjugation.human_attribute_name('present_perfect'),
+                        class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+                    </td>
+                </tr>
+            <% end %>
+        <% end %>
+    </tbody>
+</table>

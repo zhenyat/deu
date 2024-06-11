@@ -27,23 +27,33 @@
   </div>
 
   <div class="my-5">
-    <%= form.label :de %>
-    <%= form.text_field :de, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.text_field :de, 
+      placeholder: @noun.class.human_attribute_name('de'),
+      class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full"
+    %>
   </div>
 
   <div class="my-5">
-    <%= form.label :en %>
-    <%= form.text_field :en, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.text_field :en,
+      placeholder: @noun.class.human_attribute_name('en'),
+      class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full"
+    %>
   </div>
 
   <div class="my-5">
     <%= form.label :ru %>
-    <%= form.text_field :ru, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.text_field :ru,
+      placeholder: @noun.class.human_attribute_name('ru'),
+      class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full"
+    %>
   </div>
 
   <div class="my-5">
     <%= form.label :transcription %>
-    <%= form.text_field :transcription, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.text_field :transcription,
+      placeholder: @noun.class.human_attribute_name('transcription'),
+      class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full"
+    %>
   </div>
 
   <div class="my-5">
@@ -68,8 +78,10 @@
   </div>
 
   <div class="my-5">
-    <%= form.label :comment %>
-    <%= form.text_field :comment, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.text_field :comment,
+      placeholder: @noun.class.human_attribute_name('comment'),
+      class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full"
+    %>
   </div>
 
 <h2 class="font-bold text-xl py-4"><%= NounDeclension.model_name.human(count: 2) %></h2>

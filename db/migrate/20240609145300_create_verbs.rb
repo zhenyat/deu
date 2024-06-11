@@ -10,6 +10,7 @@ class CreateVerbs < ActiveRecord::Migration[7.1]
       t.string :trascription
       t.string :ru, null: false
       t.string :en, null: false
+      t.integer :level, null: false, limit: 1, default: 0
       t.integer :form, null: false, limit: 1, default: 0
       t.integer :auxiliary, null: false, limit: 1, default: 0
       t.integer :prefix, null: false, limit: 1, default: 0

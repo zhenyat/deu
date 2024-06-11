@@ -16,8 +16,13 @@
   </div>   
 
   <div class="my-5">
+    <%= form.label :level %>
+    <%= form.select :level, Verb.levels.keys %>
+  </div>
+
+  <div class="my-5">
     <%= form.label :stem_vowel_id %>
-    <%= form.collection_select(:stem_vowel_id, @stem_vowels, :id, :scheme, include_blank: false) %>
+    <%= form.collection_select(:stem_vowel_id, StemVowel.all, :id, :scheme, include_blank: false) %>
   </div>
 
   <div class="my-5">
@@ -64,7 +69,8 @@
 
   <div class="my-5">
     <%= form.label :form %>
-    <%= form.select :form, Verb.forms.keys %>
+    <%#= form.select :form, Verb.forms.keys %>
+    <%= form.select :form, Verb.forms.keys.map{|key| [I18n.t("activerecord.attributes.verb.forms.#{key}".to_sym), key]}%>
   </div>
 
   <div class="my-5">
@@ -74,10 +80,19 @@
 
   <div class="my-5">
     <%= form.label :prefix %>
-    <%= form.select :prefix, Verb.prefixes.keys %>
+    <%#= form.select :prefix, Verb.prefixes.keys %>
+    <%= form.select :prefix, Verb.prefixes.keys.map{|key| [I18n.t("activerecord.attributes.verb.prefixes.#{key}".to_sym), key]}%>
   </div>
 
+  <h2 class="font-bold text-xl py-4"><%= Conjugation.model_name.human(count: 2) %></h2>
+  <% if action_name == 'new' %>
+    <%= render "conjugation_new_form", form: form, verb: @verb %>
+  <% else %>
+    <%= render "conjugation_update_form", form: form, verb: @verb %>
+  <% end %>
+
   <div class="inline">
-    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+    <br>
+    <%= form.submit t('buttons.create'), class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
   </div>
 <% end %>

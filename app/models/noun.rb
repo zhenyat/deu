@@ -17,8 +17,6 @@ class Noun < ApplicationRecord
   accepts_nested_attributes_for :noun_declensions, allow_destroy: true
   before_destroy :remove_noun_declensions, prepend: true
 
-  # attr_accessor     :remove_noun_declensions
-
   belongs_to :part_of_speech
   belongs_to :gender
 

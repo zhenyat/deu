@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'conjugations/index'
   resources :verbs
   get 'stem_vowels/index'
   

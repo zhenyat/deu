@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_09_145300) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_10_090426) do
   create_table "articles", force: :cascade do |t|
     t.integer "part_of_speech_id", null: false
     t.integer "gcase_id", null: false
@@ -24,6 +24,17 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_09_145300) do
     t.index ["gender_id"], name: "index_articles_on_gender_id"
     t.index ["number_id"], name: "index_articles_on_number_id"
     t.index ["part_of_speech_id"], name: "index_articles_on_part_of_speech_id"
+  end
+
+  create_table "conjugations", force: :cascade do |t|
+    t.integer "verb_id", null: false
+    t.integer "personal_pronoun", limit: 1, default: 0, null: false
+    t.string "present_simple", null: false
+    t.string "past_simple", null: false
+    t.string "present_perfect", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["verb_id"], name: "index_conjugations_on_verb_id"
   end
 
   create_table "gcases", force: :cascade do |t|
@@ -164,6 +175,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_09_145300) do
     t.string "trascription"
     t.string "ru", null: false
     t.string "en", null: false
+    t.integer "level", limit: 1, default: 0, null: false
     t.integer "form", limit: 1, default: 0, null: false
     t.integer "auxiliary", limit: 1, default: 0, null: false
     t.integer "prefix", limit: 1, default: 0, null: false
@@ -177,6 +189,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_09_145300) do
   add_foreign_key "articles", "genders"
   add_foreign_key "articles", "numbers"
   add_foreign_key "articles", "parts_of_speech"
+  add_foreign_key "conjugations", "verbs"
   add_foreign_key "noun_declensions", "gcases"
   add_foreign_key "noun_declensions", "nouns"
   add_foreign_key "nouns", "genders"

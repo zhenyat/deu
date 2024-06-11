@@ -7,11 +7,12 @@ ru:
     new:            Новый
     save:           Сохранить
     show:           Показать
+    update:         Изменить
 
   header:
     actions:        Действия
     editing:        'Редактировать %{model}'
-    new:            'Создать %{model}'
+    new:            'Новый %{model}'
     view:           '%{model}'
 
 # Типы склонения имени существительного

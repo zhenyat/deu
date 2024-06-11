@@ -22,7 +22,7 @@ module Intzation  # Internationalization
       return if header.nil?
 
       locales = parse_header header
-      return it locales.empty?
+      return if locales.empty?
 
       return locales.last unless I18n.enforce_available_locales
 

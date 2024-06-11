@@ -14,6 +14,12 @@ class VerbsController < ApplicationController
   def new
     @verb = Verb.new
     verb_associations
+    @verb.conjugations.build
+    # verb_conjugations_build
+    # 6.times do
+    #   @verb.conjugations.build
+    # end
+    # puts "===== ZT-new: #{@verb.conjugations.count}"
   end
 
   # GET /verbs/1/edit
@@ -71,8 +77,18 @@ class VerbsController < ApplicationController
       @stem_vowels = StemVowel.all
     end
 
+    def verb_conjugations_build
+      Conjugation.personal_pronouns.each do |pp|
+        puts "ZT4=== #{pp.first}"
+        @verb.conjugations.build personal_pronoun: pp.first
+      end
+    end
+
     # Only allow a list of trusted parameters through.
     def verb_params
-      params.require(:verb).permit(:part_of_speech_id, :stem_vowel_id, :infinitive, :present, :past, :participle, :trascription, :ru, :en, :form, :auxiliary, :prefix)
+      params.require(:verb).permit(
+        :part_of_speech_id, :stem_vowel_id, :infinitive, :present, :past, :participle, :trascription, :ru, :en,  :level, :form, :auxiliary, :prefix,
+        conjugations_attributes: [:id, :_destroy, :personal_pronoun, :present_simple, :past_simple, :present_perfect]
+      )
     end
 end

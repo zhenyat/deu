@@ -6,25 +6,25 @@
     <%#= show_noun_de(noun) %>
   </div>
   
-  <div class="grid grid-cols-2 gap-4 my-2">
+  <div class="grid grid-cols-2 gap-4 font-bold my-2">
     <div><%= "#{Gender.model_name.human(count: 1)}:" %></div>
-    <strong><%= noun.gender[locale] %></strong>
+    <%= noun.gender[locale] %>
   </div>
 
-  <div class="grid grid-cols-2 gap-4 my-2">
+  <div class="grid grid-cols-2 gap-4 font-bold my-2">
     <div><%= "#{noun.class.human_attribute_name('en')}:" %></div>
-    <strong><%= noun.en %></strong>
+    <%= noun.en %>
   </div>
 
-  <div class="grid grid-cols-2 gap-4 my-2">
+  <div class="grid grid-cols-2 gap-4 font-bold my-2">
     <div><%= "#{noun.class.human_attribute_name('ru')}:" %></div>
-    <strong><%= noun.ru %></strong>
+    <%= noun.ru %>
   </div>
 
   <% unless noun.comment.blank? %>
-    <div class="grid grid-cols-2 gap-4 my-2">
+    <div class="grid grid-cols-2 gap-4 font-bold my-2">
       <div><%= "#{noun.class.human_attribute_name('comment')}:" %></div>
-      <strong><%= noun.comment %></strong>
+      <%= noun.comment %>
     </div>
   <% end %>
 </div>

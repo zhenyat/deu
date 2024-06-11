@@ -5,6 +5,10 @@ de:
         one:       Artikel
         other:     Artikel
 
+      conjugation:
+        one:      Konjugation
+        other:    Konjugationen
+
       definite_article:
         one:      Bestimmter Artikel
         other:    Bestimmte Artikel
@@ -63,6 +67,11 @@ de:
         kinds:
           definite:   Bestimmter Artikel
           indefinite: Unbestimmter Artikel
+
+      conjugation:
+        present_simple:   Präsens
+        past_simple:      Präteritum
+        present_perfect:  Perfekt
 
       gcase:
         de:       Deutsch
@@ -154,6 +163,7 @@ de:
         trascription:   Transkription
         en:             Englische Übersetzung
         ru:             Russische Übersetzung
+        level:          Zertifikatsniveau
         form:           Form
         forms:
           irregular:  Unregelmäßig Verb
@@ -166,3 +176,4 @@ de:
           na:           Unzutreffend
           inseparable:  Untrennbar
           separable:    Trennbar
+          ge:           ge

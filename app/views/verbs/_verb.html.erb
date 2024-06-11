@@ -22,7 +22,7 @@
 
   <div class="grid grid-cols-2 gap-4 my-2 text-lg">
     <div class="col-span-2"><%= "#{verb.class.human_attribute_name('participle')}:" %></div>
-    <strong><%= verb.participle %></strong>
+    <strong><%= "#{verb.auxiliary} #{verb.participle}" %></strong>
   </div>
 
   <div class="grid grid-cols-2 gap-4 my-2 text-lg">
@@ -45,10 +45,10 @@
     <strong  class="col-span-2"><%= "#{verb.class.human_enum_name(:form, verb.form)}" %></strong>
   </div>
 
-  <div class="grid grid-cols-2 gap-4 my-2 text-lg">
+  <!--div class="grid grid-cols-2 gap-4 my-2 text-lg">
     <div class="col-span-2"><%= "#{verb.class.human_attribute_name('auxiliary')}:" %></div>
     <strong class="col-span-2"><%= verb.auxiliary %></strong>
-  </div>
+  </div-->
 
   <div class="grid grid-cols-2 gap-4 my-2 text-lg">
     <div class="col-span-2"><%= "#{verb.class.human_attribute_name('prefix')}:" %></div>

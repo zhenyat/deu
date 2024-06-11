@@ -5,6 +5,10 @@ en:
         one:      Article
         other:    Articles
 
+      conjugation:
+        one:      Conjugation
+        other:    Conjugations
+
       gcase:
         one:      Case
         other:    Cases
@@ -55,6 +59,11 @@ en:
         kinds:
           definite:   Definite Article
           indefinite: Indefinite Article
+
+      conjugation:
+        present_simple:   Present simple
+        past_simple:      Past simple
+        present_perfect:  Present perfect
 
       gcase:
         de:       German
@@ -144,6 +153,7 @@ en:
         trascription: Trascription
         en:           English Translation
         ru:           Russian Translation
+        level:        Certificate level
         form:         Form
         forms:
           irregular:  Irregular verb
@@ -155,3 +165,4 @@ en:
           na:           Inapplicable
           inseparable:  Inseparable
           separable:    Separable
+          ge:           ge

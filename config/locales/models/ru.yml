@@ -5,6 +5,10 @@ ru:
         one:     Артикль
         other:   Артикли
 
+      conjugation:
+        one:      Спряжение
+        other:    Спряжения
+
       gcase:
         one:      Падеж
         other:    Падежи
@@ -55,6 +59,12 @@ ru:
         kinds:
           definite:   Определенный артикль
           indefinite: Неопределенный артикль
+
+      conjugation:
+        present_simple:   Настоящее
+        past_simple:      Прошедшее
+        present_perfect:  Настоящее совершенное
+
       gcase:
         de:       Немецкий
         en:       Английский
@@ -145,16 +155,19 @@ ru:
         trascription: Транскрипция
         en:           Английский перевод
         ru:           Русский перевод
+        level:        Уровень сертификата
         form:         Форма глагола
         forms:
-          irregular:  Неправильный
-          regular:    Правильный
-          modal:      Модальный
+          irregular:  Неправильный глагол
+          regular:    Правильный глагол
+          modal:      Модальный глагол
         auxiliary:    Вспомогательный глагол
         auxiliaries:
 
         prefix:       Приставка
         prefixes:
           na:           Нeприменимо
-          inseparable:  Отделяемая
-          separable:    Неотделяемая
+          inseparable:  Неотделяемая
+          separable:    Отделяемая
+          ge:           ge
+          
