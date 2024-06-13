@@ -1,0 +1,20 @@
+<table class="min-w-full table-auto">
+  <tbody>
+    <%= form.fields_for :verb_examples do |verb_example_subform| %>
+        <tr>
+          <td class='text-xl px-4 py-0 mt-2'><%= verb_example_subform.text_field :de, 
+            placeholder: object.class.human_attribute_name('de'),
+            class: "block shadow rounded-md border border-gray-400 outline-none px-4 py-2 mt-2 w-full" %>
+          </td>
+          <td class='text-xl px-4 py-0 mt-2'><%= verb_example_subform.text_field :en,
+            placeholder: object.class.human_attribute_name('en'),
+            class: "block shadow rounded-md border border-gray-400 outline-none px-4 py-2 mt-2 w-full" %>
+          </td>
+          <td class='text-xl px-4 py-0 mt-2'><%= verb_example_subform.text_field :ru,
+            placeholder: object.class.human_attribute_name('ru'),
+            class: "block shadow rounded-md border border-gray-400 outline-none px-4 py-2 mt-2 w-full" %>
+          </td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>

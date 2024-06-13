@@ -15,15 +15,16 @@ class VerbsController < ApplicationController
     @verb = Verb.new
     verb_associations
     @verb.conjugations.build
-    # verb_conjugations_build
-    # 6.times do
-    #   @verb.conjugations.build
-    # end
-    # puts "===== ZT-new: #{@verb.conjugations.count}"
+    5.times do
+      @verb.verb_examples.build
+    end
   end
 
   # GET /verbs/1/edit
   def edit
+    (5 - @verb.verb_examples.count).times do
+      @verb.verb_examples.build
+    end
   end
 
   # POST /verbs or /verbs.json
@@ -88,7 +89,8 @@ class VerbsController < ApplicationController
     def verb_params
       params.require(:verb).permit(
         :part_of_speech_id, :stem_vowel_id, :infinitive, :present, :past, :participle, :trascription, :ru, :en,  :level, :form, :auxiliary, :prefix,
-        conjugations_attributes: [:id, :_destroy, :personal_pronoun, :present_simple, :past_simple, :present_perfect]
+        conjugations_attributes: [:id, :_destroy, :personal_pronoun, :present_simple, :past_simple, :present_perfect],
+        verb_examples_attributes: [:id, :de, :en, :ru, :_destroy]
       )
     end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_13_091001) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_13_142846) do
   create_table "articles", force: :cascade do |t|
     t.integer "part_of_speech_id", null: false
     t.integer "gcase_id", null: false
@@ -175,6 +175,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_13_091001) do
     t.index ["scheme"], name: "index_stem_vowels_on_scheme", unique: true
   end
 
+  create_table "verb_examples", force: :cascade do |t|
+    t.integer "verb_id", null: false
+    t.string "de", null: false
+    t.string "en", null: false
+    t.string "ru", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["verb_id"], name: "index_verb_examples_on_verb_id"
+  end
+
   create_table "verbs", force: :cascade do |t|
     t.integer "part_of_speech_id", null: false
     t.integer "stem_vowel_id", null: false
@@ -205,6 +215,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_13_091001) do
   add_foreign_key "noun_examples", "nouns"
   add_foreign_key "nouns", "genders"
   add_foreign_key "nouns", "parts_of_speech"
+  add_foreign_key "verb_examples", "verbs"
   add_foreign_key "verbs", "parts_of_speech"
   add_foreign_key "verbs", "stem_vowels"
 end

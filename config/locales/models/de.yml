@@ -65,6 +65,10 @@ de:
         one:      Verb
         other:    Verben
 
+      verb_example:
+        one:      Verb Beispiel
+        other:    Verb Beispiele
+
     attributes:
       article:
         de:           Deutsch
@@ -170,6 +174,7 @@ de:
         past:           Präteritum
         participle:     Partizip II  
         trascription:   Transkription
+        de:             Deutsch
         en:             Englische Übersetzung
         ru:             Russische Übersetzung
         level:          Zertifikatsniveau
@@ -186,3 +191,8 @@ de:
           inseparable:  Untrennbar
           separable:    Trennbar
           ge:           ge
+
+        verb_example:
+          de:             Deutsch
+          en:             Englisch
+          ru:             Russisch

@@ -16,6 +16,7 @@
 #     pl_suffix       - Declension suffix for plural (enum)
 #
 #   08.06.2024  Zhenya
+#   13.06.2024  Last update
 ################################################################################
 class Verb < ApplicationRecord
   belongs_to :part_of_speech
@@ -29,7 +30,7 @@ class Verb < ApplicationRecord
   before_destroy :remove_conjugations, prepend: true
 
   accepts_nested_attributes_for :verb_examples, allow_destroy: true, 
-  reject_if: proc {|attr| attr['de'].blank?}
+  reject_if: :all_blank
   before_destroy :remove_verb_examples, prepend: true
 
   enum level:     %w(A1 A2 B1 B2 C1 C2)
@@ -49,6 +50,6 @@ class Verb < ApplicationRecord
   end
 
   def remove_verb_examples
-    verb_examples.each { |example| example.destroy } if examples.present?
+    verb_examples.each { |example| example.destroy } if verb_examples.present?
   end
 end

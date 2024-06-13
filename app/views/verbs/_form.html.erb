@@ -21,7 +21,7 @@
   </div>
 
   <div class="my-5">
-    <%= form.label :stem_vowel_id %>
+    <%= form.label :stem_vowel %>
     <%= form.collection_select(:stem_vowel_id, StemVowel.all, :id, :scheme, include_blank: false) %>
   </div>
 
@@ -90,6 +90,9 @@
   <% else %>
     <%= render "conjugation_update_form", form: form, verb: @verb %>
   <% end %>
+
+  <h2 class="font-bold text-xl py-4 mt-2"><%= VerbExample.model_name.human(count: 2) %></h2>
+  <%= render "examples_form", form: form, object: @verb %>
 
   <div class="inline">
     <br>

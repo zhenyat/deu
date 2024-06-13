@@ -57,6 +57,10 @@ ru:
         one:      Глагол
         other:    Глаголы
 
+      verb_example:
+        one:      Пример для глагола
+        other:    Примеры для глагола
+
     attributes:
       article:
         de:       Немецкий
@@ -162,6 +166,7 @@ ru:
         past:         Прошедшее время
         participle:   Причастие  
         trascription: Транскрипция
+        de:           Немецкий
         en:           Английский перевод
         ru:           Русский перевод
         level:        Уровень сертификата
@@ -179,4 +184,8 @@ ru:
           inseparable:  Неотделяемая
           separable:    Отделяемая
           ge:           ge
-          
+
+        verb_example:
+          de:             Немецкий
+          en:             Английский
+          ru:             Русский         

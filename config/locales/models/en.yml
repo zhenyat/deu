@@ -57,6 +57,10 @@ en:
         one:      Verb
         other:    Verbs
 
+      verb_example:
+        one:      Verb Example
+        other:    Verb Examples
+
     attributes:
       article:
         de:           German
@@ -160,6 +164,7 @@ en:
         past:         Past time
         participle:   Participle  
         trascription: Trascription
+        de:           German
         en:           English Translation
         ru:           Russian Translation
         level:        Certificate level
@@ -175,3 +180,8 @@ en:
           inseparable:  Inseparable
           separable:    Separable
           ge:           ge
+
+        verb_example:
+          de:             German
+          en:             English
+          ru:             Russian
