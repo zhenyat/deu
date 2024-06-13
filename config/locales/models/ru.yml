@@ -25,6 +25,10 @@ ru:
         one:      Склонение существительного
         other:    Склонение существительных
 
+      noun_example:
+        one:      Пример для существительного
+        other:    Примеры для существительного
+
       number:
         one:      Число
         other:    Числа
@@ -102,6 +106,11 @@ ru:
       noun_declension:
         singular:       ед.ч
         plural:         мн.ч
+
+      noun_example:
+        de:             Немецкий
+        en:             Английский
+        ru:             Русский
 
       number:
         de:       Немецкий

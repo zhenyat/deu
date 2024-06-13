@@ -33,6 +33,10 @@ de:
         one:      Deklination von Substantiv
         other:    Deklinationen von Substantiven
 
+      noun_example:
+        one:      Substantiv Beispiel
+        other:    Substantiv Beispiele
+
       number:
         one:      Nummer / Zahl
         other:    Nummern / Zahlen
@@ -110,7 +114,12 @@ de:
       noun_declension:
         singular:       Singular
         plural:         Plural
-        
+
+      noun_example:
+        de:             Deutsch
+        en:             Englisch
+        ru:             Russisch
+
       number:
         de:       Deutsch
         en:       Englisch

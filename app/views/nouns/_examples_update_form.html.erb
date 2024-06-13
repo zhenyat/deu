@@ -1,0 +1,11 @@
+<table>
+  <tbody>
+    <%= form.fields_for :noun_examples do |noun_example_subform| %>
+        <tr>
+          <td><%= noun_example_subform.text_field :de, placeholder: NounExample.human_attribute_name('de') %></td>
+          <td><%= noun_example_subform.text_field :en, placeholder: noun.class.human_attribute_name('en') %></td>
+          <td><%= noun_example_subform.text_field :ru, placeholder: noun.class.human_attribute_name('ru') %></td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>

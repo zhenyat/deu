@@ -25,6 +25,10 @@ en:
         one:      Noun Declension
         other:    Noun Declensions
 
+      noun_example:
+        one:      Noun Example
+        other:    Noun Examples
+
       number:
         one:      Number
         other:    Numbers
@@ -102,6 +106,11 @@ en:
       noun_declension:
         singular:       Singular
         plural:         Plural
+
+      noun_example:
+        de:             German
+        en:             English
+        ru:             Russian
 
       number:
         de:       German

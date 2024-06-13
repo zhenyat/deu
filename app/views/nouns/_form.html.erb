@@ -84,7 +84,7 @@
     %>
   </div>
 
-<h2 class="font-bold text-xl py-4"><%= NounDeclension.model_name.human(count: 2) %></h2>
+  <h2 class="font-bold text-xl py-4"><%= NounDeclension.model_name.human(count: 2) %></h2>
   <table class="min-w-full table-auto">
       <thead class="text-gray-700 bg-gray-200">
           <tr>
@@ -100,6 +100,13 @@
     <%= render "declension_update_form", form: form, noun: @noun %>
   <% end %>
   
+  <h2 class="font-bold text-xl py-4"><%= NounExample.model_name.human(count: 2) %></h2>
+  <% if action_name == 'new' %>
+    <%= render "examples_new_form", form: form, noun: @noun %>
+  <% else %>  
+    <%= render "examples_update_form", form: form, noun: @noun %>
+  <% end %>
+
   <div class="inline">
     <br>
     <%= form.submit t('buttons.create'), class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>

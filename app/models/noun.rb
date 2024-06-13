@@ -11,21 +11,37 @@
 #     pl_suffix       - Declension suffix for plural (enum)
 #
 #   08.06.2024  Zhenya
+#   13.06.2024  Last update
 ################################################################################
 class Noun < ApplicationRecord
+  belongs_to :part_of_speech
+  belongs_to :gender
+
   has_many :noun_declensions
   accepts_nested_attributes_for :noun_declensions, allow_destroy: true
   before_destroy :remove_noun_declensions, prepend: true
 
-  belongs_to :part_of_speech
-  belongs_to :gender
+  has_many :noun_examples
+  accepts_nested_attributes_for :noun_examples, allow_destroy: true, 
+  reject_if: proc {|attr| attr['de'].blank?}
+  before_destroy :remove_noun_examples, prepend: true
 
   # enum :kind, %w[strong weak mixed feminine]
   enum :kind,   %w(regular irregular)
   enum :level,  %w(A1 A2 B1 B2 C1 C2)
   enum :sg_suffix, %w(- ns s), suffix: true
-  enum :pl_suffix, %w(- en er n ), prefix: :pl
+  enum :pl_suffix, %w(- en er n ••e), prefix: :pl
   enum :ending, %w(- es e en ns s), prefix: :ending
+
+  validates :de, :en, :ru, presence: true
+
+  def remove_noun_declensions
+    noun_declensions.each { |declension| declension.destroy } if noun_declensions.present?
+  end
+
+  def remove_noun_examples
+      noun_examples.each { |example| example.destroy } if noun_examples.present?
+  end
 
   # declension_scheme = {
   #   strong: {
@@ -44,11 +60,7 @@ class Noun < ApplicationRecord
   #   feminine: {},
   #   plural: %w(e el er)
   # }
-  validates :de, :en, :ru, presence: true
 
-  def remove_noun_declensions
-    noun_declensions.each { |declension| declension.destroy } if noun_declensions.present?
-  end
 
   # def declension_articles_check
   #   gender = self.gender

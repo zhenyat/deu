@@ -6,6 +6,7 @@
 
     <%= render @noun %>
     <%= render('declension', noun: @noun) if @noun.noun_declensions.present? %>
+    <%= render('examples', noun: @noun) if @noun.noun_examples.present? %>
 
     <%= link_to t('buttons.edit'), edit_noun_path(@noun), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <%= link_to t('buttons.back'), nouns_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>

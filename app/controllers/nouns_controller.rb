@@ -16,6 +16,7 @@ class NounsController < ApplicationController
     @noun = Noun.new
     @noun.part_of_speech = PartOfSpeech.find_by en: 'noun'
     @noun.noun_declensions.build
+    @noun.noun_examples.build
   end
 
   # GET /nouns/1/edit
@@ -71,7 +72,8 @@ class NounsController < ApplicationController
       params.require(:noun).permit(
         :part_of_speech_id, :gender_id, :de, :en, :ru, :transcription, :ending, :level, 
         :kind, :sg_suffix, :pl_suffix, :comment,
-        noun_declensions_attributes: [:id, :gcase_id, :singular, :plural, :_destroy]
+        noun_declensions_attributes: [:id, :gcase_id, :singular, :plural, :_destroy],
+        noun_examples_attributes: [:id, :de, :en, :ru, :_destroy]
       )
     end
 end

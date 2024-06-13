@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_10_090426) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_13_091001) do
   create_table "articles", force: :cascade do |t|
     t.integer "part_of_speech_id", null: false
     t.integer "gcase_id", null: false
@@ -87,6 +87,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_10_090426) do
     t.datetime "updated_at", null: false
     t.index ["gcase_id"], name: "index_noun_declensions_on_gcase_id"
     t.index ["noun_id"], name: "index_noun_declensions_on_noun_id"
+  end
+
+  create_table "noun_examples", force: :cascade do |t|
+    t.integer "noun_id", null: false
+    t.string "de", null: false
+    t.string "en"
+    t.string "ru", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["noun_id"], name: "index_noun_examples_on_noun_id"
   end
 
   create_table "nouns", force: :cascade do |t|
@@ -192,6 +202,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_10_090426) do
   add_foreign_key "conjugations", "verbs"
   add_foreign_key "noun_declensions", "gcases"
   add_foreign_key "noun_declensions", "nouns"
+  add_foreign_key "noun_examples", "nouns"
   add_foreign_key "nouns", "genders"
   add_foreign_key "nouns", "parts_of_speech"
   add_foreign_key "verbs", "parts_of_speech"
