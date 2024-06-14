@@ -85,11 +85,7 @@
   </div>
 
   <h2 class="font-bold text-xl py-4"><%= Conjugation.model_name.human(count: 2) %></h2>
-  <% if action_name == 'new' %>
-    <%= render "conjugation_new_form", form: form, verb: @verb %>
-  <% else %>
-    <%= render "conjugation_update_form", form: form, verb: @verb %>
-  <% end %>
+    <%= render "conjugation_form", form: form %>
 
   <h2 class="font-bold text-xl py-4 mt-2"><%= VerbExample.model_name.human(count: 2) %></h2>
   <%= render "examples_form", form: form, object: @verb %>

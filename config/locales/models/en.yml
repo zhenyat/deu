@@ -69,6 +69,7 @@ en:
           indefinite: Indefinite Article
 
       conjugation:
+        personal_pronoun: Personal pronoun
         present_simple:   Present simple
         past_simple:      Past simple
         present_perfect:  Present perfect

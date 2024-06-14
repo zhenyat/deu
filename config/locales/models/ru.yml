@@ -69,6 +69,7 @@ ru:
           indefinite: Неопределенный артикль
 
       conjugation:
+        personal_pronoun: Личное местоимение
         present_simple:   Настоящее
         past_simple:      Прошедшее
         present_perfect:  Настоящее совершенное

@@ -1,0 +1,22 @@
+  <h3 class="font-bold text-xl"><%= t(:conjugation) %></h3>
+
+  <table class="min-w-full table-auto border border-collapse border-slate-500">
+    <thead class="text-xl text-gray-700 bg-green-200">
+      <tr>
+        <th class="px-6 py-0 border border-slate-400"><%= Conjugation.human_attribute_name('personal_pronoun') %></th>
+        <th class="px-6 py-0 border border-slate-400"><%= Conjugation.human_attribute_name('present_simple') %></th>
+        <th class="px-6 py-0 border border-slate-400"><%= Conjugation.human_attribute_name('past_simple') %></th>
+        <th class="px-6 py-0 border border-slate-400"><%= Conjugation.human_attribute_name('present_perfect') %></th>
+      </tr>
+    </thead>     
+    <tbody class='bg-green-100'>
+      <% object.conjugations.each do |conjugation| %>
+        <tr>
+          <td><%= conjugation.personal_pronoun %></td>
+          <td><%= conjugation.present_simple %></td>
+          <td><%= conjugation.past_simple %></td>
+          <td><%= conjugation.present_perfect %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>

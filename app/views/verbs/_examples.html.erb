@@ -1,0 +1,13 @@
+  <h3 class="font-bold text-xl"><%= VerbExample.model_name.human(count: 2) %></h3>
+
+  <table class="min-w-full table-auto border border-collapse border-slate-500">   
+    <tbody class='bg-green-100'>
+      <% object.verb_examples.each do |example| %>
+        <tr>
+          <td><%= example.de %></td>
+          <td><%= example.en %></td>
+          <td><%= example.ru %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>

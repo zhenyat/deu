@@ -14,7 +14,9 @@ class VerbsController < ApplicationController
   def new
     @verb = Verb.new
     verb_associations
-    @verb.conjugations.build
+    Conjugation.personal_pronouns.keys.each do |k|
+      @verb.conjugations.build personal_pronoun: k
+    end
     5.times do
       @verb.verb_examples.build
     end
