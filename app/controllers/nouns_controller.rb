@@ -15,12 +15,19 @@ class NounsController < ApplicationController
   def new
     @noun = Noun.new
     @noun.part_of_speech = PartOfSpeech.find_by en: 'noun'
-    @noun.noun_declensions.build
-    @noun.noun_examples.build
+    Gcase.all.each do |gcase|
+      @noun.noun_declensions.build gcase: gcase
+    end
+    5.times do
+      @noun.noun_examples.build
+    end
   end
 
   # GET /nouns/1/edit
   def edit
+    (5 - @noun.noun_examples.count).times do
+      @noun.noun_examples.build
+    end
   end
 
   # POST /nouns or /nouns.json

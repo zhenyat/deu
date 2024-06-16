@@ -1,10 +1,10 @@
   <br/>
-  <h3 class="font-bold text-xl"><%= NounExample.model_name.human(count: 2) %></h3>
+  <h3 class="font-bold text-xl text-yellow-700"><%= NounExample.model_name.human(count: 2) %></h3>
 
   <table class="min-w-full table-auto border border-collapse border-slate-500">
     <thead class="text-xl text-gray-700 bg-green-200">    
-    <tbody class='bg-grey-100'>
-      <% noun.noun_examples.each do |example| %>
+    <tbody class='bg-green-100'>
+      <% object.noun_examples.each do |example| %>
         <tr>
           <td><%= example.de %></td>
           <td><%= example.en %></td>

@@ -84,10 +84,10 @@
     <%= form.select :prefix, Verb.prefixes.keys.map{|key| [I18n.t("activerecord.attributes.verb.prefixes.#{key}".to_sym), key]}%>
   </div>
 
-  <h2 class="font-bold text-xl py-4"><%= Conjugation.model_name.human(count: 2) %></h2>
+  <h2 class="font-bold text-xl text-yellow-700 py-4"><%= Conjugation.model_name.human(count: 2) %></h2>
     <%= render "conjugation_form", form: form %>
 
-  <h2 class="font-bold text-xl py-4 mt-2"><%= VerbExample.model_name.human(count: 2) %></h2>
+  <h2 class="font-bold text-xl text-yellow-700 py-4 mt-2"><%= VerbExample.model_name.human(count: 2) %></h2>
   <%= render "examples_form", form: form, object: @verb %>
 
   <div class="inline">

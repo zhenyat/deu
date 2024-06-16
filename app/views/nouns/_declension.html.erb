@@ -1,4 +1,4 @@
-  <h3 class="font-bold text-xl"><%= t(:declension) %></h3>
+  <h3 class="font-bold text-xl text-yellow-700"><%= t(:declension) %></h3>
 
   <table class="min-w-full table-auto border border-collapse border-slate-500">
     <thead class="text-xl text-gray-700 bg-green-200">
@@ -12,9 +12,9 @@
       <% Gcase.all.each do |gcase| %>
         <tr>
           <td><%= gcase[locale].capitalize %></td>
-          <td><%= noun.noun_declensions.find_by(gcase: gcase).singular %></td>
-          <td><%= noun.noun_declensions.find_by(gcase: gcase).plural %></td>
-          <!--td><%#= declension_plural(noun, gcase.abbr_de) %><%#= ending(noun) %> </td-->
+          <td><%= object.noun_declensions.find_by(gcase: gcase).singular %></td>
+          <td><%= object.noun_declensions.find_by(gcase: gcase).plural %></td>
+          <!--td><%#= declension_plural(object, gcase.abbr_de) %><%#= ending(object) %> </td-->
         </tr>
       <% end %>
     </tbody>
