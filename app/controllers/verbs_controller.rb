@@ -14,8 +14,8 @@ class VerbsController < ApplicationController
   def new
     @verb = Verb.new
     verb_associations
-    Conjugation.personal_pronouns.keys.each do |k|
-      @verb.conjugations.build personal_pronoun: k
+    Conjugation.personal_pronouns.keys.each do |personal_pronoun|
+      @verb.conjugations.build personal_pronoun: personal_pronoun
     end
     5.times do
       @verb.verb_examples.build
@@ -24,6 +24,21 @@ class VerbsController < ApplicationController
 
   # GET /verbs/1/edit
   def edit
+    
+    if @verb.conjugations.count == 0
+      Conjugation.personal_pronouns.keys.each do |personal_pronoun|
+        @verb.conjugations.build personal_pronoun: personal_pronoun
+      end
+    else
+      existing_personal_pronouns = []
+      @verb.conjugations.each do |conjugation|
+        existing_personal_pronouns.push conjugation.personal_pronoun
+      end
+      Conjugation.personal_pronouns.keys.each do |personal_pronoun|
+        @verb.conjugations.build(personal_pronoun: personal_pronoun) unless existing_personal_pronouns.include? personal_pronoun
+      end
+    end
+  
     (5 - @verb.verb_examples.count).times do
       @verb.verb_examples.build
     end

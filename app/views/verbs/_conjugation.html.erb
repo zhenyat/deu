@@ -10,7 +10,7 @@
       </tr>
     </thead>     
     <tbody class='bg-green-100'>
-      <% object.conjugations.each do |conjugation| %>
+      <% ordered_conjugations(object).each do |conjugation| %>
         <tr>
           <td><%= conjugation.personal_pronoun %></td>
           <td><%= conjugation.present_simple %></td>
