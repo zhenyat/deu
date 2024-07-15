@@ -1,6 +1,7 @@
 <table> 
   <tbody>
-      <%= form.fields_for :conjugations do |conjugation_subform| %>        
+      <% # Updated for conjugations ordering %>
+      <%= form.fields_for :conjugations, ordered_conjugations(object) do |conjugation_subform| %>        
         <tr>
             <td class='text-xl font-bold text-red-700 px-4 py-0 mt-2'><%= conjugation_subform.text_field :personal_pronoun,
                 placeholder: Conjugation.human_attribute_name('personal_pronoun'), 

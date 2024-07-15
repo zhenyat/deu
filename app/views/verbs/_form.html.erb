@@ -85,7 +85,7 @@
   </div>
 
   <h2 class="font-bold text-xl text-yellow-700 py-4"><%= Conjugation.model_name.human(count: 2) %></h2>
-    <%= render "conjugation_form", form: form %>
+    <%= render "conjugation_form", form: form, object: @verb %>
 
   <h2 class="font-bold text-xl text-yellow-700 py-4 mt-2"><%= VerbExample.model_name.human(count: 2) %></h2>
   <%= render "examples_form", form: form, object: @verb %>
